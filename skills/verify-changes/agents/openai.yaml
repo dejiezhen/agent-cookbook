@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify Changes"
+  short_description: "Check acceptance criteria with execution evidence"
+  default_prompt: "Use $verify-changes for this task."

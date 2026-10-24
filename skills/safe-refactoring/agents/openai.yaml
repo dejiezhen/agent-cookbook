@@ -1,0 +1,4 @@
+interface:
+  display_name: "Safe Refactoring"
+  short_description: "Simplify structure while preserving behavior"
+  default_prompt: "Use $safe-refactoring for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Postgres Migrations"
+  short_description: "Prepare migrations with integrity and recovery"
+  default_prompt: "Use $postgres-migrations for this task."

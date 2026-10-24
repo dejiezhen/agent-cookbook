@@ -1,0 +1,4 @@
+interface:
+  display_name: "Performance Investigation"
+  short_description: "Measure bottlenecks and verify focused improvements"
+  default_prompt: "Use $performance-investigation for this task."

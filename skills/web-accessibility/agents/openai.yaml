@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Accessibility"
+  short_description: "Make forms and interactions accessible to users"
+  default_prompt: "Use $web-accessibility for this task."

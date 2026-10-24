@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Developer Skills"
+  short_description: "Create focused, portable skills from real workflows"
+  default_prompt: "Use $write-skills for this task."

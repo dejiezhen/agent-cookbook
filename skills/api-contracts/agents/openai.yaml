@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Contracts"
+  short_description: "Define reliable frontend and backend boundaries"
+  default_prompt: "Use $api-contracts for this task."
