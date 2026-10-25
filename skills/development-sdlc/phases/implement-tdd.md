@@ -30,6 +30,9 @@ Report a missed test-first step honestly. For a regression, confirm the assertio
 distinguishes pre-fix behavior in an isolated copy when practical; do not reset user
 work or delete implementation to manufacture red. Pure refactors can use existing
 coverage and characterization tests; prose/formatting edits need no invented tests.
+For a requested structural improvement, use the
+[refactoring guide](../references/refactoring.md) to preserve public behavior and
+keep newly discovered bug fixes explicit.
 
 Keep deterministic adapters and orchestration under TDD for AI features. Use
 task-specific evaluations for model output, tool selection, outcomes, and effects;

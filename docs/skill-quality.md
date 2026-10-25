@@ -58,6 +58,12 @@ final review. Native PostgreSQL was blocked by the sandbox; native concurrency a
 locking, actual live-worker interruption, fix-budget exhaustion, cross-host behavior,
 and comparative effectiveness remain unestablished.
 
+A [discovery trial](evaluation.md#recorded-trial-discovery-interview-and-plan-handoff)
+exercised a first interview batch and, separately, a standalone plan from supplied
+answers. The plan retained requirements, distinguished proposals from decisions,
+and exposed blocked work without starting implementation. A full adaptive interview
+and successful execution of that plan remain untested by this fixture.
+
 Further validation should use a real permitted project task: record a baseline,
 run the same task with a selected skill under comparable conditions, inspect artifacts
 and execution, and revise only from observed failures. Project-specific examples,

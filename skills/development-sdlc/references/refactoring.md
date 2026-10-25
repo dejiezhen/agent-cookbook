@@ -1,8 +1,3 @@
----
-name: safe-refactoring
-description: Improve a concrete code structure while preserving observable behavior. Use for a requested refactor, duplication removal, or simplifying an existing implementation; separate intentional behavior changes from structural changes.
----
-
 # Refactor with a reason
 
 Identify the specific maintenance problem and a practical success criterion: a

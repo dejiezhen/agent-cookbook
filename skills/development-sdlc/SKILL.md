@@ -1,6 +1,6 @@
 ---
 name: development-sdlc
-description: Carry a software feature or fix from requirements and acceptance criteria through a concise spec, task plan, red-green-refactor implementation, review, and verification. Also supports explicitly requested planning, code review, or verification alone. Use relevant engineering and Vue, TypeScript, Python, or PostgreSQL standards within the requested scope.
+description: Plan and deliver software through requirements discovery, acceptance criteria, a spec, task plan, red-green-refactor implementation, review, and verification. Use a structured interview for a new or ambiguous product. Also supports debugging, behavior-preserving refactoring, planning-only, review-only, and verification-only requests, with relevant engineering and stack standards.
 license: MIT
 ---
 
@@ -22,8 +22,10 @@ Read the applicable stage before doing its work, rather than loading every file:
 
 | Work | Instructions |
 | --- | --- |
+| Explore a new product, unclear idea, or requested in-depth planning interview | [Discovery interview](references/discovery-interview.md), then specify and plan |
 | Clarify requirements, define behavior, plan slices | [Specify and plan](phases/spec-and-plan.md) |
 | Investigate an unclear bug or intermittent failure | [Diagnose the cause](references/debugging.md), then TDD |
+| Simplify existing code while preserving behavior | [Refactor safely](references/refactoring.md), using the implementation and review stages |
 | Implement specified behavior or a regression | [Red, green, refactor](phases/implement-tdd.md) |
 | Review a task/diff or verify the result | [Review and verify](phases/review-and-verify.md) |
 | Coordinate suitable multi-task implementation | [Subagent execution](phases/subagent-execution.md) |

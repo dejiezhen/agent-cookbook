@@ -7,6 +7,9 @@ investigation ceremony.
 Capture expected versus observed behavior, a repeatable reproduction or failure
 trace, relevant environment, and recent changes. Preserve the original symptom.
 Distinguish an assertion failure from a missing service or broken harness.
+For failures spanning components, use the
+[boundary-tracing example](boundary-tracing.md) and record redacted identifiers
+that let observations refer to the same request or run.
 
 Trace inputs and effects to the first boundary that violates its contract. Compare
 a working case with a failing case. Name a plausible cause, the observation that

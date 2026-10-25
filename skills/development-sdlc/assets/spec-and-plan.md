@@ -1,9 +1,25 @@
 # Feature or fix
 
+Use applicable sections only. A tiny change can be a short spec in chat; a new
+product or substantial milestone needs enough context to survive a new agent/chat.
+
+## Problem and first useful outcome
+
+Who is affected, what do they do now, and what should improve? Describe the first
+complete user journey and the evidence that would show it helps. Reuse existing
+product decisions instead of inventing a new vision for an established project.
+
 ## Goal, scope, constraints
 
 State the user outcome, current behavior, intended behavior, and relevant non-goals.
 Record compatibility, authorized effects, and unresolved material decisions.
+
+## Decisions, boundaries, and open questions
+
+Record stack/runtime choices and their reasons, relevant data ownership/interfaces,
+deployment constraints, and material risks. Distinguish confirmed decisions,
+recommendations, assumptions to verify, and open questions. Map unanswered material
+decisions to the tasks they block. Skip sections that add no useful information.
 
 ## Acceptance criteria and test map
 
@@ -13,7 +29,7 @@ Record compatibility, authorized effects, and unresolved material decisions.
 
 ## Implementation tasks
 
-For each cohesive task record:
+Give each cohesive task a stable ID, then record:
 
 - Goal and acceptance IDs; exact behavior and failure cases.
 - Dependencies and interfaces; relevant global constraints.
@@ -30,3 +46,6 @@ Record baseline state/revision, inline or delegated execution, task/review budge
 and restrictions on commits or external effects when relevant. Define integrated
 checks. During execution, map criteria to actual evidence and record remaining gaps.
 The plan does not grant new authorization.
+State the first buildable end-to-end slice, ready versus blocked work, context paths,
+and the next implementation action. Mark proposed files/commands as proposals until
+verified. The plan must be understandable without the interview transcript.

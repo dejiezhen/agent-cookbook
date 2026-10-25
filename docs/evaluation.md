@@ -9,9 +9,7 @@ data and services.
 
 | Skill | Should match | Should not be selected solely for |
 | --- | --- | --- |
-| development-sdlc | Specify/implement a feature, fix a regression with TDD, or perform requested code review/verification | Translate a paragraph, run a model benchmark, or research a topic without a code change |
-| systematic-debugging | Reproduce an intermittent stale response | Draft an unimplemented feature spec |
-| safe-refactoring | Consolidate a duplicated domain rule without behavior changes | Add a new user capability |
+| development-sdlc | Interview a new product idea, specify/implement a feature, diagnose a bug, preserve behavior during a refactor, or perform requested review/verification | Translate a paragraph, run a model benchmark, or research a topic without a software planning/delivery task |
 | api-contracts | Change a Python endpoint consumed by TypeScript | Rename a CSS class |
 | web-accessibility | Fix keyboard and focus behavior in a dialog | Tune a database query |
 | performance-investigation | Diagnose a measured slow endpoint | Preemptively add a cache |
@@ -77,6 +75,13 @@ guidance; do not require all plausible skills to be invoked.
 14. **Stale inputs:** Supply a passing historical run and change only a runtime data
     file or test configuration. In verification-only mode, check that the affected
     test reruns, its actual failure is reported, and product files remain unchanged.
+15. **Discovery interview:** Give a vague product idea and answer in stages. Check
+    that the agent starts with the problem/audience, asks small adaptive batches,
+    challenges conflicting constraints, and keeps proposals distinct from decisions.
+    The final artifact must carry criteria, dependencies, ready/blocked tasks, and
+    enough context for another agent without inventing missing answers or coding
+    during a planning-only request. In an existing game, preserve its documented
+    stack/rules and ask about the next milestone rather than restarting discovery.
 
 Record the agent/version, prompt, fixture revision, selected skill revision,
 observable outcome, and failures. Compare against the same task without the skill
@@ -255,3 +260,32 @@ migration rollout, browser portability, or transient loading timing. The parent
 checked the independent review and exact final input hashes, preserved note, and
 clean fixture Git state. Dependencies, app code, raw logs, and screenshots remain
 local validation artifacts; no test runtime was added to the distributed skill.
+
+## Recorded trial: discovery interview and plan handoff
+
+Date: 2026-10-25. A context-free evaluator received a standalone 27-file bundle,
+SHA-256 `946bc3443e33a6021f8e5d7d1dd759e248eaaad0c7f3f17012a683bc4ba19c3d`
+(the sorted path/NUL/bytes/NUL algorithm above), and an isolated planning-only
+fixture. Host model defaults were inherited; the resolved model version was not
+captured. Networking, installation, implementation, external contact, publication,
+and delegation were prohibited.
+
+| Scenario | Actual result |
+| --- | --- |
+| Vague tool-lending idea | First response asked three connected questions about audience, current borrowing friction, and useful outcome; no stack selection or invented answers |
+| Separate request with supplied discovery notes | One saved plan preserved the specified TypeScript/Python/PostgreSQL stack, private community scope, exact-date approval, single-active-loan invariant, and budget |
+| Handoff quality | Stable criterion/task IDs, dependencies, context, first end-to-end slice, proposed interfaces, and explicit decision blockers; commands and framework choices remained unverified proposals |
+| Conditional routing | Engineering, TypeScript, Python, and PostgreSQL loaded; unrelated Vue and implementation/review stages stayed unloaded |
+| Scope | Only three Markdown reports created under the fixture's permitted output directory; no application implementation or dependency setup |
+
+The maintaining agent inspected all reports and the plan. A separate install smoke
+copied all nine remaining skills and passed structural validation; the installed
+Development SDLC bundle matched the candidate byte-for-byte, including its license.
+The former debugging boundary example was moved unchanged, and the refactoring
+guidance was preserved inside the bundle.
+
+This trial exercised the first interview batch and a handoff from already supplied
+answers as separate requests. It did not execute a full adaptive multi-round
+interview, implement the plan, verify proposed frameworks/hosting, or demonstrate
+improved product outcomes. Other agent hosts and comparative effectiveness remain
+untested. Raw reports remain local scratch artifacts.

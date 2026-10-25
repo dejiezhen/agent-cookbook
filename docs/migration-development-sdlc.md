@@ -15,6 +15,8 @@ resources inside that folder, not separately discovered skills.
 | typescript-vue-conventions | Separate [TypeScript](../skills/development-sdlc/standards/typescript.md) and [Vue](../skills/development-sdlc/standards/vue.md) modules |
 | python-conventions | [Python](../skills/development-sdlc/standards/python.md) and boundary examples |
 | postgres-migrations | [PostgreSQL](../skills/development-sdlc/standards/postgres.md), including query and transaction conventions |
+| systematic-debugging | [Diagnosis](../skills/development-sdlc/references/debugging.md) and the preserved [boundary-tracing example](../skills/development-sdlc/references/boundary-tracing.md) |
+| safe-refactoring | [Refactoring](../skills/development-sdlc/references/refactoring.md), linked from implementation |
 
 ## Existing installations
 
@@ -22,7 +24,7 @@ Updating this repository does not update copied skills in another project.
 
 1. Preview, then install `development-sdlc` with the existing copy helper into your
    agent's chosen project skill directory. The installer will not overwrite a copy.
-2. Compare any local changes in the nine previous folders with the corresponding
+2. Compare any local changes in the retired folders listed above with the corresponding
    new modules. Preserve useful project-specific changes and source notices.
 3. Once reconciled, move the old installed folders outside all agent discovery paths
    or remove their tracked copies through your normal review process. Keeping both

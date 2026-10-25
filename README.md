@@ -5,8 +5,8 @@ development**. Use **requirements → acceptance criteria and spec → task plan
 red → green → refactor → review → verify**.
 
 Keep changes small enough to explain and complete enough to satisfy the requirement.
-This library contains 11 skills: one integrated development workflow and ten
-complementary specialist skills. The
+This library contains 9 skills: one integrated development workflow, seven
+application specialists, and one skill-authoring guide. The
 [source catalog](docs/sources.md) records useful upstream projects and official guidance.
 
 ## Start with Development SDLC
@@ -50,7 +50,7 @@ and standards; it needs no sibling skill or upstream plugin. Actual subagent exe
 depends on the host's available tools and permission to delegate. Planning-only,
 review-only, and verification-only requests stay within their requested scope.
 
-The previous nine workflow/convention skills have been consolidated. See the
+Overlapping workflow, debugging, refactoring, and convention entrypoints have been consolidated. See the
 [migration guide](docs/migration-development-sdlc.md) for old names and existing
 installations. The [source record](skills/development-sdlc/UPSTREAM.md) and
 [third-party notices](THIRD_PARTY_NOTICES.md) record licensing and attribution details.
@@ -62,8 +62,6 @@ coordinator. No specialist is required to install Development SDLC on its own.
 
 | Skill | When useful |
 | --- | --- |
-| [Systematic debugging](skills/systematic-debugging/SKILL.md) | Reproduce and locate a failure before changing code |
-| [Safe refactoring](skills/safe-refactoring/SKILL.md) | Simplify a concrete structure while preserving behavior |
 | [API contracts](skills/api-contracts/SKILL.md) | Align clients, services, validation, and compatibility |
 | [Web accessibility](skills/web-accessibility/SKILL.md) | Keyboard, focus, forms, dialogs, and status updates |
 | [Performance investigation](skills/performance-investigation/SKILL.md) | Measure a bottleneck and validate a targeted improvement |
@@ -72,6 +70,9 @@ coordinator. No specialist is required to install Development SDLC on its own.
 | [Agent tool design](skills/agent-tool-design/SKILL.md) | Tool schemas, outcomes, authorization, duplicate-call semantics |
 | [Agent evaluation](skills/agent-evaluation/SKILL.md) | Task outcomes, unintended effects, recovery, cost, and latency |
 | [Agent safety](skills/agent-safety/SKILL.md) | Trust boundaries around external content and actions |
+
+`write-skills` helps maintain this cookbook; most application projects need only
+Development SDLC and whichever specialists their actual work calls for.
 
 For AI features, use TDD for deterministic code and task-specific evaluations for
 model behavior. A passing adapter test does not establish reliable tool choice or
@@ -105,6 +106,21 @@ Discovery and execution differ across hosts; see the
 [official references](docs/sources.md#agent-format-and-discovery).
 
 ## Example task
+
+For a new idea or an unclear next milestone, start with discovery:
+
+```text
+Use $development-sdlc in discovery mode. Interview me about this idea,
+challenge my assumptions, and create a plan another agent can implement.
+Use existing project decisions, ask questions in small rounds, and stop before coding.
+```
+
+The interview explores the problem, audience, first useful scope, behavior, data,
+stack/integrations, constraints, and validation as relevant. It produces one saved
+spec/plan with acceptance criteria, decisions, open questions, dependencies, and
+ordered tasks. When ready, ask the agent to implement that plan by its path.
+
+For already understood work:
 
 ```text
 Use $development-sdlc to add project archiving. Define acceptance criteria,

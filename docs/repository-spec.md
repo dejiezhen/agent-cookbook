@@ -12,6 +12,11 @@ Support local Codex, Claude Code, and Cursor projects.
 - Specs identify observable acceptance criteria before implementation. New behavior
   is implemented through small failing-test/passing-test cycles. Existing user work
   is preserved; a missed test-first step is reported honestly without deleting work.
+- New/ambiguous product planning uses an adaptive discovery interview covering the
+  problem, audience, outcome, first useful scope, relevant behavior/data/stack, and
+  constraints. The saved spec/plan distinguishes decisions, assumptions, and blocking
+  questions and can be consumed without the interview transcript. Planning-only
+  scope does not start implementation.
 - A curated source catalog links to primary upstream projects, explains their use,
   and distinguishes references from adapted content. The requested Superpowers
   adaptation retains its source revision, license, and modification record.
@@ -19,6 +24,8 @@ Support local Codex, Claude Code, and Cursor projects.
   selectively. Vue, TypeScript, Python, and PostgreSQL routing follows affected
   behavior and supported versions. Both implementers and reviewers receive the
   applicable modules explicitly. No overlapping workflow entrypoints remain.
+- Debugging and behavior-preserving refactoring live in Development SDLC resources,
+  including the preserved boundary-tracing example and compatibility guidance.
 - Small understood work defaults to inline execution; significant risk can add
   independent review without delegated implementation. Substantial separable work
   uses one subagent coordinator for dispatch, progress, task review, fixes, and

@@ -1,4 +1,4 @@
 interface:
   display_name: "Development SDLC"
-  short_description: "Specify, build with TDD, review, and verify changes"
-  default_prompt: "Use $development-sdlc to deliver this change from a concise spec through TDD, review, and verification, applying the relevant stack standards."
+  short_description: "Discover, plan, build with TDD, review, and verify"
+  default_prompt: "Use $development-sdlc to clarify this idea, create a scoped plan, and implement authorized work with TDD, review, and verification."
