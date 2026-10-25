@@ -9,17 +9,10 @@ data and services.
 
 | Skill | Should match | Should not be selected solely for |
 | --- | --- | --- |
-| engineering-practices | Implement a small feature with intentional boundaries | Translate a paragraph |
-| spec-driven-development | Clarify and implement new archival behavior | Fix Markdown spacing |
-| test-driven-development | Add a specified validation rule with tests first | Edit a project description |
-| typescript-vue-conventions | Add typed props and loading states to a Vue form | Modify a Python-only script |
-| python-conventions | Simplify a Python module and its error handling | Modify a Vue-only component |
+| development-sdlc | Specify/implement a feature, fix a regression with TDD, or perform requested code review/verification | Translate a paragraph, run a model benchmark, or research a topic without a code change |
 | systematic-debugging | Reproduce an intermittent stale response | Draft an unimplemented feature spec |
-| code-review | Review a diff for defects and unnecessary complexity | Translate source comments |
 | safe-refactoring | Consolidate a duplicated domain rule without behavior changes | Add a new user capability |
-| verify-changes | Check that a proposed fix satisfies its acceptance criteria | Summarize a research article |
 | api-contracts | Change a Python endpoint consumed by TypeScript | Rename a CSS class |
-| postgres-migrations | Add a constraint while keeping existing data valid | Change a component label |
 | web-accessibility | Fix keyboard and focus behavior in a dialog | Tune a database query |
 | performance-investigation | Diagnose a measured slow endpoint | Preemptively add a cache |
 | write-skills | Capture a recurring test setup workflow | Complete a one-time test run |
@@ -27,7 +20,6 @@ data and services.
 | agent-tool-design | Specify a tool's arguments, result, authorization, and duplicate-call behavior | Rename a UI label |
 | agent-evaluation | Compare two agent configurations on task outcomes and effects | Run only deterministic adapter unit tests |
 | agent-safety | Review an agent reading hostile content with access to write tools | Edit unrelated Markdown formatting |
-| subagent-driven-development | Execute a multi-task implementation plan with fresh workers and independent review | Write only a spec, change one label, or build a runtime agent product |
 
 Multiple skills can legitimately apply. Evaluate whether selection adds useful
 guidance; do not require all plausible skills to be invoked.
@@ -68,6 +60,11 @@ guidance; do not require all plausible skills to be invoked.
     review, observed TDD evidence, a durable ledger, and preservation of user-owned
     files. Resume a recorded stage rather than repeating completed work. Verify the
     skill can be installed with its required prompts, templates, and license intact.
+11. **Stage and stack routing:** Request only a full-stack plan and then only a Vue
+    review. Check that planning loads affected Vue/TypeScript/Python/PostgreSQL
+    standards, stops before implementation, and review keeps product files unchanged.
+    In Python-only work, an unrelated Vue dependency must not force loading Vue.
+    Check that actual task workers and reviewers receive and read selected modules.
 
 Record the agent/version, prompt, fixture revision, selected skill revision,
 observable outcome, and failures. Compare against the same task without the skill
@@ -75,6 +72,9 @@ when practical. Grade behavior and artifact quality, not phrase matching. Make n
 revisions supported by observed failure, then rerun the relevant scenario.
 
 ## Recorded trial: combined subagent workflow
+
+Historical trial before consolidation into Development SDLC; it does not by itself
+validate the new entrypoint or its stage/stack routing.
 
 Date: 2026-10-24. An independent controller was given the adapted skill and a small
 isolated Git repository, without this conversation's history. It was asked to execute
@@ -107,3 +107,76 @@ fallback remain untested. There was no comparison against inline execution or an
 unmodified upstream workflow; this is evidence of one functioning execution, not
 proof of general effectiveness or a speed/cost improvement. Raw trial artifacts are
 kept in the local workspace's ignored scratch area and are not distributed here.
+
+## Recorded trial: Development SDLC scope and stack routing
+
+Date: 2026-10-24. A context-free evaluator received a standalone installation of
+`development-sdlc` and a disposable repository, then two sequential user requests:
+a full-stack archive plan only, followed by a Vue diff review only. Host model
+defaults were inherited; the resolved model version was not captured.
+
+Tested bundle SHA-256: `122cf0eedbb019bd8c232670cbf6a73bb73fd6310ffc1348d992477b46ecb8f7`.
+Computed from sorted relative file paths followed by NUL, file bytes, and NUL for
+every distributed file, independent of its installation location.
+
+The fixture contained Vue 3.5.13/TypeScript configuration, a Python service boundary,
+a PostgreSQL schema, a user note, and an existing uncommitted search-component change.
+Its local baseline was `4078a8f`. No networking, installation, implementation,
+external service, publication, or delegation was permitted.
+
+| Observation | Actual result |
+| --- | --- |
+| Planning scope | One spec, acceptance/test map, and five cohesive tasks; no implementation |
+| Full-stack routing | Engineering, TypeScript, Vue, Python, and PostgreSQL modules read |
+| Review scope | Complete existing Vue diff reviewed; only engineering/TypeScript/Vue applied |
+| Version awareness | Supported Vue 3.5 reactive props destructuring was not flagged |
+| Findings | Stale async results/loading ownership and missing local failure state reported |
+| Discriminating check | Controlled promises in the extracted watcher callback reproduced the defects |
+| Preservation | All eight product-file hashes and recorded Git state unchanged; only ignored reports created |
+| Standalone packaging | All 23 installed bundle files matched the candidate byte-for-byte, including license |
+
+The parent inspected the reports and findings and independently checked the original
+dirty-file set, unchanged fixtures, and installed-bundle equality. The callback probe
+did not mount Vue, run compiler macros, or test browser behavior. Planned archive
+tests and PostgreSQL operations were not executed. This establishes one scoped use
+of the new routing; it is not evidence of general effectiveness or host portability.
+Raw reports remain in local scratch, outside the distributed repository.
+
+## Recorded trial: Development SDLC implementation
+
+Date: 2026-10-24. A separate context-free controller received the same standalone
+23-file bundle/fingerprint recorded above, an isolated repository with two Python
+stubs, and behavioral requirements without a prewritten plan. Baseline `b5fdbb4`;
+local task commits `1b855cc` and `100e321`. Host model defaults were inherited;
+resolved model versions were not captured. Standard library only; local task-owned
+commits permitted; networking, installation, and publication prohibited.
+
+The request required a defaulted ASCII-decimal page size bounded to 1–200 and stable
+exact-string ID deduplication supporting one-shot iterators without input mutation.
+The fixture also had an unrelated Vue dependency and a pre-existing uncommitted note.
+
+| Observation | Actual result |
+| --- | --- |
+| Spec and plan | Controller derived one authoritative spec, acceptance/test map, and two task briefs |
+| Implementers | Two fresh context-free workers, sequential execution |
+| Task reviews | Two separate fresh reviewers; specification compliant, quality approved |
+| Integrated review | Fresh reviewer approved the entire four-file base-to-final change |
+| Module routing | Both implementers and all reviewers read supplied engineering/Python modules and relevant stage/role instructions |
+| Unrelated stack | Vue/TypeScript/PostgreSQL modules stayed unloaded for Python-only work |
+| TDD evidence | Page-size slices observed relevant RED then GREEN; 8 focused tests passed. Deduplication observed stub RED then GREEN; 5 focused tests passed |
+| Final checks | Required full suite passed all 14 tests on Python 3.13.4; unchanged evidence reused during review |
+| Scope/preservation | Only two modules and two test files committed; original note bytes and dirty status preserved; no dependencies added |
+| Recovery artifacts | Spec, briefs, exact diffs, reports, logs, and ledger retained in ignored scratch |
+
+One overlapping dispatch hit the shared agent limit; fresh dispatch succeeded after
+the current review finished. No implementation workers overlapped, identities were
+not reused, and no inline fallback was needed. No review findings required fixes.
+The parent inspected the reports, integrated review, and test log and independently
+verified exact changed paths, final commit, and original note/status preservation.
+
+This exercised requirements through final verification, including explicit standards
+handoff. It did not exercise interrupted recovery, fix-budget exhaustion, unavailable
+delegation fallback, live services, or full-stack implementation. No baseline speed,
+cost, or effectiveness comparison was performed. These small fixtures establish
+working paths, not a reason to use subagents for every small change. Raw artifacts
+remain in local scratch and are not distributed.

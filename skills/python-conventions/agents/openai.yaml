@@ -1,4 +1,0 @@
-interface:
-  display_name: "Python Conventions"
-  short_description: "Write readable Python with clear boundaries"
-  default_prompt: "Use $python-conventions for this task."

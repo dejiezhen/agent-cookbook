@@ -6,9 +6,12 @@
 - Portable instructions for Codex, Claude Code, and Cursor.
 - AI development focus: tool-using agents and automation.
 - Spec → red → green → refactor, followed by verification of acceptance criteria.
-- For suitable planned work, a Superpowers-derived subagent workflow coordinates
-  fresh implementers, independent task review, and integrated final review. Spec,
-  engineering, TDD, and stack skills supply inputs and standards within that workflow.
+- One `development-sdlc` skill owns requirements, spec/plan, TDD, review, and verification.
+  It loads stage and stack modules as needed. For suitable planned work, its
+  Superpowers-derived execution stage coordinates fresh implementers, independent
+  task review, and integrated review. Both workers and reviewers receive the standards.
+- Apply YAGNI, KISS, DRY, modular design, high cohesion/low coupling, explicit contracts,
+  and testable composition according to concrete requirements and failure costs.
 - Intentional changes: solve the concrete requirement, preserve existing conventions,
   and justify new abstractions, dependencies, configuration, and files.
 - Prefer focused tests that expose meaningful failures over test count or broad

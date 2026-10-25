@@ -1,4 +1,0 @@
-interface:
-  display_name: "Test-Driven Development"
-  short_description: "Implement behavior through red, green, refactor"
-  default_prompt: "Use $test-driven-development for this task."

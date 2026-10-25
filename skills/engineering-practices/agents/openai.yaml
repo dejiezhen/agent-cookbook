@@ -1,4 +1,0 @@
-interface:
-  display_name: "Intentional Engineering"
-  short_description: "Make focused, maintainable engineering decisions"
-  default_prompt: "Use $engineering-practices for this task."

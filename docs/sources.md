@@ -1,6 +1,6 @@
 # Sources and useful upstream projects
 
-Reviewed on **2026-10-23**. These are primary project repositories and official
+Reviewed on **2026-10-23**, with workflow/standards updates on **2026-10-24**. These are primary project repositories and official
 documentation. Links are research references, not automatic installations or
 claims that every upstream workflow has been audited or evaluated here.
 
@@ -9,7 +9,7 @@ claims that every upstream workflow has been audited or evaluated here.
 | Project | Why it is useful | How it fits this library |
 | --- | --- | --- |
 | [Superpowers](https://github.com/obra/superpowers) | Composable development workflows including TDD, debugging, planning, review, and verification | Closest match to spec and TDD interests; inspect its stronger process requirements before adopting the whole framework |
-| [GitHub Spec Kit](https://github.com/github/spec-kit) | A toolkit for carrying specifications through plans, tasks, implementation, and convergence | Consider for larger projects needing persistent artifacts; the short local spec skill keeps small changes light |
+| [GitHub Spec Kit](https://github.com/github/spec-kit) | A toolkit for carrying specifications through plans, tasks, implementation, and convergence | Consider for larger projects needing persistent artifacts; the local SDLC spec/plan stage keeps small changes light |
 | [OpenAI skills](https://github.com/openai/skills) | Official Codex skill catalog and examples | Browse for tool-specific workflows beyond this library |
 | [Anthropic skills](https://github.com/anthropics/skills) | Examples spanning development, testing, MCP, design, and documents | Study selected workflows; inspect each license because document skills have different terms |
 | [Trail of Bits skills](https://github.com/trailofbits/skills) | Security auditing, differential review, static analysis, and testing workflows | Add selected security workflows when the project's risks call for them |
@@ -18,7 +18,7 @@ claims that every upstream workflow has been audited or evaluated here.
 | [Anthony Fu's skills](https://github.com/antfu/skills) | Vue ecosystem guidance with focused references | Use version-aware Vue decisions while preserving the project's conventions |
 
 Original skills express independently written, project-neutral workflows. The
-requested [subagent workflow adaptation](../skills/subagent-driven-development/UPSTREAM.md)
+requested [subagent workflow adaptation](../skills/development-sdlc/UPSTREAM.md)
 retains upstream provenance and its bundled MIT license; see [third-party notices](../THIRD_PARTY_NOTICES.md).
 Other source links are references. For future imports, record the source revision,
 applicable license, notices, modifications, and the need for maintaining a copy.
@@ -42,6 +42,9 @@ review and AI references were added on 2026-10-24.
 
 - [Google engineering practices](https://google.github.io/eng-practices/review/reviewer/looking-for.html):
   design, functionality, useful tests, and avoiding unnecessary complexity.
+- [Martin Fowler on YAGNI](https://martinfowler.com/bliki/Yagni.html): defer speculative
+  capability while maintaining a design that can be changed. Engineering principles
+  in this library are decision guidance, not a requirement to add layers or classes.
 - [Martin Fowler on TDD](https://martinfowler.com/bliki/TestDrivenDevelopment.html):
   test cases and the red → green → refactor process.
 - [Vue and TypeScript](https://vuejs.org/guide/typescript/composition-api.html):

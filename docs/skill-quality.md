@@ -14,10 +14,12 @@ changes an agent's decisions on an actual task in a way that improves the result
 - `scripts/`: repeated mechanics that benefit from deterministic execution. Add
   these for real recurring work, not to make a skill look substantial.
 
-The engineering entrypoint stays compact while its references demonstrate
-abstraction choices, ownership, and ambiguous writes. Vue references cover specific
-version and async-state traps. Python examples clarify validation and error boundaries.
-Agent skills carry tool contracts, evaluation plans, and attack/recovery cases.
+The Development SDLC entrypoint routes to substantial stage and stack modules.
+Engineering references demonstrate abstraction choices, ownership, and ambiguous
+writes. Vue references cover version and async-state traps. Python examples clarify
+validation and error boundaries. These resources belong to one installable skill;
+they are not separate workflow owners. Agent skills carry tool contracts, evaluation
+plans, and attack/recovery cases.
 
 ## When to add detail
 
@@ -33,11 +35,19 @@ and author-specific preferences in the same file; evaluate both separately.
 ## Current evidence and limits
 
 The library has structural validation and tests of its management utilities. These
-checks alone do not demonstrate that the skills improve agent behavior. One
-[recorded subagent workflow trial](evaluation.md#recorded-trial-combined-subagent-workflow)
+checks alone do not demonstrate that the skills improve agent behavior. A
+[historical subagent workflow trial](evaluation.md#recorded-trial-combined-subagent-workflow)
 executed two tasks with fresh implementers, independent task review, integrated review,
 and passing tests. It exercised the successful path, not recovery or a fix loop.
-Other scenarios remain planned, and comparative effectiveness has not been established.
+A [Development SDLC routing trial](evaluation.md#recorded-trial-development-sdlc-scope-and-stack-routing)
+then exercised full-stack planning-only and Vue review-only scope on the new bundle,
+preserving existing files and Git state. A separate
+[implementation trial](evaluation.md#recorded-trial-development-sdlc-implementation)
+executed the new entrypoint from requirements through TDD, explicit Python standards
+handoff, independent reviews, and a passing 14-test suite. These did not execute a
+full Vue application/database, interruption recovery, or a review fix loop. Other
+scenarios remain planned; comparative effectiveness and behavior across agent hosts
+have not been established.
 
 Further validation should use a real permitted project task: record a baseline,
 run the same task with a selected skill under comparable conditions, inspect artifacts

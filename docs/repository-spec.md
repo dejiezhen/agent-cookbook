@@ -1,8 +1,9 @@
 # Repository specification
 
 Create a portable, curated library for full-stack development with Vue, TypeScript,
-Python, and PostgreSQL. The preferred implementation workflow is **spec → red →
-green → refactor → verify**. Support local Codex, Claude Code, and Cursor projects.
+Python, and PostgreSQL. One `development-sdlc` entrypoint owns **requirements →
+acceptance criteria and spec → task plan → red → green → refactor → review → verify**.
+Support local Codex, Claude Code, and Cursor projects.
 
 ## Acceptance criteria
 
@@ -14,11 +15,17 @@ green → refactor → verify**. Support local Codex, Claude Code, and Cursor pr
 - A curated source catalog links to primary upstream projects, explains their use,
   and distinguishes references from adapted content. The requested Superpowers
   adaptation retains its source revision, license, and modification record.
-- Planned multi-task work uses one subagent coordinator for dispatch, progress,
-  task review, fixes, and integrated verification. Spec planning and implementation
-  standards do not launch overlapping coordination pipelines.
-- The subagent workflow is installable by itself with all required prompts and
-  templates, honest inline fallback, and no hidden dependency on an upstream plugin.
+- The integrated workflow loads supporting stage modules and engineering standards
+  selectively. Vue, TypeScript, Python, and PostgreSQL routing follows affected
+  behavior and supported versions. Both implementers and reviewers receive the
+  applicable modules explicitly. No overlapping workflow entrypoints remain.
+- Suitable multi-task work uses one subagent coordinator for dispatch, progress,
+  task review, fixes, and integrated verification. Small work stays inline; plan-only,
+  review-only, and verification-only requests preserve their requested scope.
+- Development SDLC is installable by itself with all required prompts, templates,
+  and standards, honest inline fallback, and no hidden upstream plugin dependency.
+- Engineering guidance applies YAGNI, KISS, DRY, modular design, explicit contracts,
+  and relevant reliability practices without speculative layers or tooling.
 - A selected skill can be copied into the chosen agent's project directory. Preview
   is the default; writes require `--apply`. Existing destinations, unknown names,
   traversal, and overlapping source/destination paths are rejected before copying.

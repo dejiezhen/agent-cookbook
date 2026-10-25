@@ -1,115 +1,113 @@
 # Agent cookbook
 
-Portable skills for **intentional Vue, TypeScript, Python, Postgres, and AI agent development**.
-The default implementation workflow is **spec → red → green → refactor → verify**.
+Portable skills for **intentional Vue, TypeScript, Python, PostgreSQL, and AI agent
+development**. Use **requirements → acceptance criteria and spec → task plan →
+red → green → refactor → review → verify**.
 
 Keep changes small enough to explain and complete enough to satisfy the requirement.
-Reuse existing conventions. Add abstractions, dependencies, and configuration for a
-demonstrated need. Treat correctness, accessibility, security, and data integrity as
+This library contains 11 skills: one integrated development workflow with an attributed
+Superpowers adaptation, and ten complementary specialist skills. The
+[source catalog](docs/sources.md) records useful upstream projects and official guidance.
+
+## Start with Development SDLC
+
+[development-sdlc](skills/development-sdlc/SKILL.md) owns the whole development cycle.
+Invoke one skill; it loads the stage and stack guidance relevant to the task:
+
+```text
+development-sdlc/
+  SKILL.md                 Entry point and routing
+  phases/                  Spec/plan, TDD, subagent execution, review/verification
+  standards/               Engineering, TypeScript, Vue, Python, PostgreSQL
+  references/              Concrete decisions, test design, failure/recovery cases
+  prompts/                 Implementer, task reviewer, integrated reviewer
+  assets/                  Spec/plan and progress templates
+  agents/openai.yaml       Optional Codex UI metadata
+  LICENSE + UPSTREAM.md    Superpowers attribution and modifications
+```
+
+The engineering module applies **YAGNI, KISS, DRY, modular design, high cohesion and
+low coupling, explicit contracts, and testable composition** to concrete decisions.
+Shared business knowledge needs one owner; similar code with different purposes
+can stay separate. New abstractions, dependencies, modules, and configuration need
+a current reason. Correctness, security, accessibility, and data integrity remain
 part of the behavior where relevant.
 
-This library contains 19 skills: 18 original skills and a self-contained Superpowers
-adaptation, plus a [curated source catalog](docs/sources.md).
-It is a focused starting point, not an exhaustive index of every agent skill.
+Stack routing uses the affected behavior, interfaces, files, configurations, and
+supported versions. Vue with TypeScript loads engineering + Vue + TypeScript;
+Python database work loads engineering + Python + PostgreSQL. Each delegated task
+explicitly passes the applicable modules to its implementer **and reviewer**.
+Unrelated modules stay unloaded.
 
-## Start with these
+For suitable multi-task work, one coordinator dispatches fresh sequential task
+implementers, independent spec/quality review, and integrated final review. Small
+or tightly coupled work stays inline. The bundle has all required prompts, templates,
+and standards; it needs no sibling skill or upstream plugin. Actual subagent execution
+depends on the host's available tools and permission to delegate. Planning-only,
+review-only, and verification-only requests stay within their requested scope.
 
-| Skill | What it contributes |
+The previous nine workflow/convention skills have been consolidated. See the
+[migration guide](docs/migration-development-sdlc.md) for old names and existing
+installations. The [source record](skills/development-sdlc/UPSTREAM.md) and
+[third-party notices](THIRD_PARTY_NOTICES.md) preserve the Superpowers attribution.
+
+## Complementary specialists
+
+These add relevant domain guidance when needed; they do not start another SDLC
+coordinator. No specialist is required to install Development SDLC on its own.
+
+| Skill | When useful |
 | --- | --- |
-| [Engineering practices](skills/engineering-practices/SKILL.md) | Design decisions, explicit boundaries, intentional scope |
-| [Spec-driven development](skills/spec-driven-development/SKILL.md) | Observable acceptance criteria before implementation |
-| [Subagent-driven development](skills/subagent-driven-development/SKILL.md) | Coordinate task implementers, independent review, and final verification |
-| [Test-driven development](skills/test-driven-development/SKILL.md) | Small, observed red → green → refactor cycles |
-| [TypeScript / Vue conventions](skills/typescript-vue-conventions/SKILL.md) | Types, component ownership, reactivity, focused tests |
-| [Python conventions](skills/python-conventions/SKILL.md) | Readability, errors, types, resources, focused modules |
-
-For a planned feature, use **spec and plan → subagent implementation with TDD →
-task review → integrated review and verification**. The spec skill owns requirements
-and planning. The subagent skill is the single coordinator. Engineering, language,
-TDD, review, and verification skills supply standards within its roles; they do not
-launch duplicate pipelines. Small or tightly coupled work can stay inline.
-
-The adapted subagent skill bundles its implementer/reviewer prompts, plan and progress
-templates, and recovery rules. It has no hidden dependency on the Superpowers plugin
-or scripts. Subagent execution requires the host's delegation tools; inline fallback
-is explicit. [Source and modifications](skills/subagent-driven-development/UPSTREAM.md)
-record the upstream revision and retained license.
-
-## Tool-using agents and automation
-
-| Skill | What it contributes |
-| --- | --- |
-| [Agent design](skills/agent-design/SKILL.md) | Choose simple control flow, bound runs, and handle interruption |
-| [Agent tool design](skills/agent-tool-design/SKILL.md) | Explicit tool schemas, outcomes, authorization, and retry semantics |
-| [Agent evaluation](skills/agent-evaluation/SKILL.md) | Measure task outcomes, unintended effects, recovery, cost, and latency |
-| [Agent safety](skills/agent-safety/SKILL.md) | Preserve trust boundaries around external content and actions |
-
-For AI features, apply TDD to deterministic code and use task-specific evaluations
-for model behavior. A passing adapter test does not establish reliable tool choice
-or a correct external outcome. Evaluation and tool-contract templates are included
-inside their respective skills. These guides do not prescribe a provider or execute
-API calls by themselves; the subagent workflow uses its host's delegation tools.
-
-## Add when useful
-
-| Skill | When to use it |
-| --- | --- |
-| [Systematic debugging](skills/systematic-debugging/SKILL.md) | Diagnose a failure before changing code |
-| [Code review](skills/code-review/SKILL.md) | Find supported defects and unnecessary complexity |
+| [Systematic debugging](skills/systematic-debugging/SKILL.md) | Reproduce and locate a failure before changing code |
 | [Safe refactoring](skills/safe-refactoring/SKILL.md) | Simplify a concrete structure while preserving behavior |
-| [Verify changes](skills/verify-changes/SKILL.md) | Match completion claims to actual execution evidence |
-| [API contracts](skills/api-contracts/SKILL.md) | Align TypeScript clients and Python service boundaries |
-| [Postgres migrations](skills/postgres-migrations/SKILL.md) | Constraints, compatibility, locks, backfills, recovery |
-| [Web accessibility](skills/web-accessibility/SKILL.md) | Forms, dialogs, status updates, keyboard interaction |
+| [API contracts](skills/api-contracts/SKILL.md) | Align clients, services, validation, and compatibility |
+| [Web accessibility](skills/web-accessibility/SKILL.md) | Keyboard, focus, forms, dialogs, and status updates |
 | [Performance investigation](skills/performance-investigation/SKILL.md) | Measure a bottleneck and validate a targeted improvement |
-| [Write skills](skills/write-skills/SKILL.md) | Capture a repeated workflow without growing a catchall |
+| [Write skills](skills/write-skills/SKILL.md) | Capture a recurring workflow without growing a catchall |
+| [Agent design](skills/agent-design/SKILL.md) | Simple control flow, bounded runs, interruption and recovery |
+| [Agent tool design](skills/agent-tool-design/SKILL.md) | Tool schemas, outcomes, authorization, duplicate-call semantics |
+| [Agent evaluation](skills/agent-evaluation/SKILL.md) | Task outcomes, unintended effects, recovery, cost, and latency |
+| [Agent safety](skills/agent-safety/SKILL.md) | Trust boundaries around external content and actions |
 
-## Install selected skills into a project
+For AI features, use TDD for deterministic code and task-specific evaluations for
+model behavior. A passing adapter test does not establish reliable tool choice or
+a correct external outcome. The agent guides are provider-neutral instructions;
+they do not execute API calls themselves.
 
-Requires Python 3.10+ for the copy helper; running the skills themselves depends on
-the target project's tools. Clone this repo, then preview a selected installation:
+## Install into a project
+
+Requires Python 3.10+ for the copy helper. Preview an installation:
 
 ```sh
 git clone https://github.com/dejiezhen/agent-cookbook.git
 cd agent-cookbook
-python3 scripts/install_skills.py --dest ../your-project/.agents/skills --skills engineering-practices spec-driven-development subagent-driven-development test-driven-development typescript-vue-conventions python-conventions
+python3 scripts/install_skills.py --dest ../your-project/.agents/skills --skills development-sdlc
 ```
 
 Add `--apply` to copy after reviewing the preview. Existing skill folders are never
-overwritten. To update an installation, compare the tracked files and merge the
-changes deliberately. Copying creates an independent snapshot; it does not auto-sync.
+overwritten. Copies are independent snapshots; compare and merge updates deliberately.
+Include other skill names in `--skills` only when useful. No global configuration
+is changed.
 
 | Agent | Project destination | Explicit invocation |
 | --- | --- | --- |
-| Codex | `.agents/skills` | `$skill-name` in CLI / IDE |
-| Claude Code | `.claude/skills` | `/skill-name` |
+| Codex | `.agents/skills` | `$development-sdlc` |
+| Claude Code | `.claude/skills` | `/development-sdlc` |
 | Cursor | `.agents/skills` or `.cursor/skills` | `/` and select the skill |
 
-For Claude Code, use the same helper with `--dest ../your-project/.claude/skills`.
-Codex and Cursor can share one `.agents/skills` installation. Keep one installed
-copy per agent's discovery path to avoid duplicate names. Instructions use the
-[Agent Skills format](https://agentskills.io/specification); `agents/openai.yaml`
-provides optional Codex UI metadata. Individual agents' discovery and execution
-behavior can differ; see the [official installation references](docs/sources.md#agent-format-and-discovery).
-
-No global configuration is changed by this repository. Install just the workflows
-you expect to use; each skill is self-contained.
+Keep one installed copy per agent's discovery path to avoid duplicate names.
+Instructions follow the [Agent Skills format](https://agentskills.io/specification).
+Discovery and execution differ across hosts; see the
+[official references](docs/sources.md#agent-format-and-discovery).
 
 ## Example task
 
-In Codex, after installing the relevant skills:
-
 ```text
-Use $spec-driven-development to specify and plan project archiving,
-then $subagent-driven-development to implement the plan.
-Require spec → red → green for behavior changes. Apply
-$engineering-practices, $typescript-vue-conventions, and
-$python-conventions to the relevant task roles.
-Keep each change tied to the acceptance criteria.
+Use $development-sdlc to add project archiving. Define acceptance criteria,
+implement with observed red → green → refactor, then review and verify.
+Apply the relevant Vue, TypeScript, Python, and PostgreSQL standards.
+Use subagents when the task boundaries justify them. Keep changes intentional.
 ```
-
-Use `/skill-name` when invoking the equivalent skills in Claude Code. This is a
-portable instruction library, not a guarantee that every host will follow it.
 
 ## Maintain and validate
 
@@ -120,21 +118,13 @@ python3 -m venv .venv
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-The validator checks manifests, folder names, UI metadata, local Markdown links,
-and distributable file structure. Tooling tests cover copying and preservation.
-[Behavioral prompts and recorded trials](docs/evaluation.md) document the current
-evidence. The subagent workflow has one independently run two-task success-path trial;
-passing structural checks does not prove that every skill improves agent performance.
+Validation checks manifests, names, UI metadata, local Markdown links, and file
+structure. Utility tests cover copying and preservation. See
+[evaluation prompts and recorded trials](docs/evaluation.md) for behavioral evidence
+and its limits. Structural checks alone do not establish agent effectiveness.
 
-## How much detail belongs in a skill?
-
-Keep the entrypoint focused. Load examples and fragile, task-specific details from
-references when relevant. Depth comes from concrete decisions, failure cases, and
-tested outcomes, rather than a target word count. See [skill quality](docs/skill-quality.md)
-and the [upstream review](docs/upstream-review.md) for the rationale and specific
-ideas incorporated from open-source skill repositories.
-
-See [preferences and next decisions](docs/preferences.md) for tailoring and
-[contribution guidance](CONTRIBUTING.md) for adding skills. Original content is MIT
-licensed. The adapted workflow retains its upstream license and attribution in
-[third-party notices](THIRD_PARTY_NOTICES.md); other linked projects remain references.
+Keep the entrypoint focused and disclose detail progressively. Useful depth comes
+from decisions, failure cases, and tested outcomes rather than a word target. See
+[skill quality](docs/skill-quality.md), [upstream review](docs/upstream-review.md),
+[preferences](docs/preferences.md), and [contributing](CONTRIBUTING.md).
+Original content is MIT licensed; adapted material retains its attribution.

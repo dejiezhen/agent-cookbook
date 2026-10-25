@@ -28,16 +28,17 @@ the library's MIT license does not replace third-party terms.
 ## Combined subagent workflow
 
 The user selected Superpowers' subagent-driven development as the implementation
-coordinator. The [adapted skill](../skills/subagent-driven-development/SKILL.md)
+coordinator. The [integrated skill](../skills/development-sdlc/SKILL.md)
 bundles role prompts, plan/ledger templates, and review/recovery guidance. Its
-[source record](../skills/subagent-driven-development/UPSTREAM.md) and
-[license](../skills/subagent-driven-development/LICENSE) travel with an installation.
+[source record](../skills/development-sdlc/UPSTREAM.md) and
+[license](../skills/development-sdlc/LICENSE) travel with an installation.
 
-Spec-driven development now supplies requirements and task plans. Code review and
-verification remain usable independently and provide standards within the assigned
-roles; they do not dispatch another pipeline. TDD and language conventions stay
-focused on how to implement. The product-facing agent skills retain their separate
-purpose. This combines coordination while preserving useful standalone workflows.
+Requirements, spec/plan, TDD, code review, verification, engineering, and language
+conventions are now supporting modules inside `development-sdlc`. Its coordinator
+explicitly routes standards to both workers and reviewers. Focused planning/review/
+verification requests use the appropriate stage without starting implementation.
+The product-facing agent skills retain their separate purpose. See the
+[migration guide](migration-development-sdlc.md) for retired entrypoints.
 
 ## What the comparison says about length
 

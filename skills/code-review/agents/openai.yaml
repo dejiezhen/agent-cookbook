@@ -1,4 +1,0 @@
-interface:
-  display_name: "Evidence-Based Code Review"
-  short_description: "Find actionable defects and unnecessary complexity"
-  default_prompt: "Use $code-review for this task."

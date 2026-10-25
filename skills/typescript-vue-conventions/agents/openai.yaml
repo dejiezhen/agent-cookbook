@@ -1,4 +1,0 @@
-interface:
-  display_name: "TypeScript and Vue Conventions"
-  short_description: "Write clear, typed Vue components and state"
-  default_prompt: "Use $typescript-vue-conventions for this task."
