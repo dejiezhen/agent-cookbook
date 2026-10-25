@@ -7,7 +7,9 @@
 - AI development focus: tool-using agents and automation.
 - Spec → red → green → refactor, followed by verification of acceptance criteria.
 - One `development-sdlc` skill owns requirements, spec/plan, TDD, review, and verification.
-  It loads stage and stack modules as needed. For suitable planned work, its
+  It loads stage and stack modules as needed. Small work stays inline; significant
+  risk can add independent review without delegated implementation. For substantial
+  work with useful task separation, its
   subagent execution stage coordinates fresh implementers, independent
   task review, and integrated review. Both workers and reviewers receive the standards.
 - Apply YAGNI, KISS, DRY, modular design, high cohesion/low coupling, explicit contracts,

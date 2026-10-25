@@ -1,6 +1,9 @@
 # Red, green, refactor
 
 Start from the acceptance criteria, applicable standards, actual runner, and baseline.
+For an unclear bug, intermittent failure, or uncertain owning boundary, first use
+[evidence-led diagnosis](../references/debugging.md). A clear localized regression
+can go directly to a discriminating regression test.
 For new executable behavior and regression fixes:
 
 1. Select one observable behavior. Write the smallest test that exposes its absence
@@ -32,6 +35,9 @@ Keep deterministic adapters and orchestration under TDD for AI features. Use
 task-specific evaluations for model output, tool selection, outcomes, and effects;
 one exact model reply or a mocked tool call cannot establish agent reliability.
 
-Record actual commands, results, relevant red/green evidence, and checks not run.
+Record actual commands, tested revision/patch, relevant inputs/environment, results,
+red/green evidence, and checks not run. Follow the
+[evidence validity rules](../references/review-and-recovery.md#evidence-and-final-state)
+when reusing results.
 Proceed to [review and verification](review-and-verify.md); implementation self-review
 does not replace an independent reviewer when the selected execution mode requires one.

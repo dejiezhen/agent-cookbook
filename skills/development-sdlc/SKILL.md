@@ -23,15 +23,30 @@ Read the applicable stage before doing its work, rather than loading every file:
 | Work | Instructions |
 | --- | --- |
 | Clarify requirements, define behavior, plan slices | [Specify and plan](phases/spec-and-plan.md) |
+| Investigate an unclear bug or intermittent failure | [Diagnose the cause](references/debugging.md), then TDD |
 | Implement specified behavior or a regression | [Red, green, refactor](phases/implement-tdd.md) |
 | Review a task/diff or verify the result | [Review and verify](phases/review-and-verify.md) |
 | Coordinate suitable multi-task implementation | [Subagent execution](phases/subagent-execution.md) |
 
-One coordinator owns task state, dispatch, fix loops, and final handoff. Subagents
-are useful for cohesive tasks with explicit boundaries and independent review.
-Keep small or tightly coupled changes inline. When delegation is unavailable or
-not permitted, use the same standards directly and describe the execution mode
-honestly. Do not simulate independent review or add a delegation framework.
+## Choose proportionate execution
+
+Default to inline work. Choose by uncertainty, impact, and useful task isolation;
+several requested items or changed files alone do not justify delegation.
+
+| Change | Default execution |
+| --- | --- |
+| Small, understood feature or fix | Inline implementation, focused tests, self-review; a short spec in chat |
+| Cohesive change with significant correctness, security, or data risk | Inline implementation plus independent review |
+| Substantial work with separable task context and interfaces | Fresh task implementers, task reviews, integrated review, and ledger |
+
+Before delegating, state the concrete benefit. Group tiny related work instead of
+creating a worker for each helper. Independent review does not require delegating
+implementation: for the middle mode, use the [review stage](phases/review-and-verify.md)
+and [final-review prompt](prompts/final-reviewer.md) on the one coherent change, without
+manufacturing a task pipeline or ledger. One coordinator owns any dispatch and fixes.
+
+When delegation is unavailable or not permitted, work inline and disclose missing
+independent review when relevant. Do not simulate it or add a delegation framework.
 
 ## Route engineering standards
 

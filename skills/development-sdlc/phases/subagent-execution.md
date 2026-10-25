@@ -1,7 +1,7 @@
 # Coordinate subagent execution
 
-Read after a task plan exists, when delegation is available,
-permitted, and useful. Keep small or tightly coupled work inline. One coordinator
+Use only after the entrypoint's execution decision justifies delegated implementation
+and a task plan exists. Several small helpers alone are not a reason. One coordinator
 owns the spec, dispatch, reviews, fix loops, ledger, and final result. Stage and
 standard modules supply instructions within roles rather than another workflow.
 
@@ -33,12 +33,19 @@ findings. Reconcile artifacts and Git before dispatching on resumption.
    findings and evidence in the ledger. Mark complete only when required criteria
    are met; a review budget cannot turn a material defect into success.
 
-After all tasks, dispatch one fresh [integrated reviewer](../prompts/final-reviewer.md)
+After all tasks, dispatch a fresh [integrated reviewer](../prompts/final-reviewer.md)
 with the overall spec, ledger, complete base-to-final change, all applicable standards,
-and verification evidence. Address integration gaps and verify the final state under
-the [review stage](review-and-verify.md). Finish once with the combined outcome and
-remaining limits. Preserve useful recovery records through handoff.
+and verification evidence. Record its reviewed revision/patch and findings. Resolve
+required findings through **fix → affected checks → scoped independent re-review**.
+Resume that reviewer when available; otherwise supply a fresh reviewer with the
+original findings, intervening diff, and new evidence. Repeat within the
+[review budget](../references/review-and-recovery.md#findings-and-fix-budget).
+An earlier verdict cannot approve later product changes. Finish under the
+[review stage](review-and-verify.md) only when required findings are resolved and
+the review/evidence covers the delivered state, or report the remaining limits.
+Preserve useful recovery records through handoff.
 
 Workers and reviewers do not spawn their own coordination pipelines. If delegation
-becomes unavailable, reconcile finished work and continue inline when permitted,
+becomes unavailable, establish that previous writers have stopped, reconcile their
+actual changes and reports, and continue inline when permitted,
 disclosing the change in execution mode and any missing independent review.

@@ -15,7 +15,8 @@ Read the whole change and inspect nearby context where a concrete risk requires 
 Disclose missing or truncated coverage. Review parked findings and evidence gaps;
 task completion labels do not settle unresolved correctness questions.
 
-Check that execution evidence covers the final revision and appropriate integration
+Record the exact reviewed revision/patch. Check that execution evidence covers it,
+its relevant dependency/configuration/environment inputs, and appropriate integration
 boundaries. Recommend or run focused checks to answer a specific unresolved concern
 within the permitted environment. Do not repeat unaffected checks without a reason.
 
@@ -25,3 +26,9 @@ Return supported findings with locations,
 severity, trigger, and impact, plus unmet criteria, evidence gaps, and an overall
 assessment. Distinguish optional improvements from defects. The coordinator owns
 fixes, final verification, and publication decisions.
+
+For re-review, check each prior required finding against the new exact state and
+affected-check evidence. Review the fix and its immediate consequences; expand scope
+only for a concrete newly exposed risk. Return resolved/unresolved findings, updated
+specification and quality verdicts, evidence gaps, and the new reviewed identity.
+Do not carry an earlier approval forward across unreviewed product changes.

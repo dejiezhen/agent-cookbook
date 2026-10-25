@@ -32,12 +32,17 @@ from defects. Do not invent findings or demand speculative infrastructure. A mat
 unmet criterion cannot be waived by calling it optional. In coordinated execution,
 the coordinator owns fixes and scoped re-review using the
 [review/recovery rules](../references/review-and-recovery.md).
+This includes findings from the final integrated review and inline implementation
+with independent review: record the reviewed state, fix, run affected checks, and
+obtain scoped independent re-review before treating those findings as resolved.
 
 ## Verify the final behavior
 
 Map acceptance criteria to evidence covering the actual final code. Use configured
-commands and required project checks. Reuse valid evidence for unchanged code; rerun
-affected checks after fixes and close specific integration gaps. Avoid ritual full
+commands and required project checks. Reuse evidence only while its relevant code,
+dependencies, configuration, schema/data setup, and environment inputs remain valid;
+use the [evidence rules](../references/review-and-recovery.md#evidence-and-final-state).
+Rerun affected checks after changes and close specific integration gaps. Avoid ritual full
 suite repetitions, while honoring mandatory project/CI checks.
 
 | Claim | Evidence that addresses it |

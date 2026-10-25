@@ -20,17 +20,10 @@ APIs and avoid unrelated Options/Composition API rewrites.
 - For SSR/Nuxt, check server/browser ownership, request-scoped state, and hydration
   before using browser globals or module-level mutable state.
 
-Check versions before adopting or rejecting an API:
-
-| Choice | Constraint |
-| --- | --- |
-| Reactive `defineProps` destructuring | Supported by Vue 3.5+ within the same script-setup block; preserve reactive sources when passing elsewhere |
-| `onWatcherCleanup` | Vue 3.5+; register synchronously before awaiting |
-| `defineModel` | Vue 3.4+; use the established model contract |
-| `shallowRef` | Nested mutations do not trigger updates through it; useful when updates replace the value |
-
 Read [Vue failure examples](../references/vue-decisions.md) for async ownership,
-reactivity depth, or prop sources. Choose reactivity depth and supported syntax
+reactivity depth, prop sources, or version-sensitive APIs such as reactive props
+destructuring, `onWatcherCleanup`, and `defineModel`. The version table lives there.
+Choose reactivity depth and supported syntax
 according to the actual data flow and project conventions.
 
 Test rendering and events through observable interactions. Use the existing runner;

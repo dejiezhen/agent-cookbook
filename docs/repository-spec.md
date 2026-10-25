@@ -19,9 +19,17 @@ Support local Codex, Claude Code, and Cursor projects.
   selectively. Vue, TypeScript, Python, and PostgreSQL routing follows affected
   behavior and supported versions. Both implementers and reviewers receive the
   applicable modules explicitly. No overlapping workflow entrypoints remain.
-- Suitable multi-task work uses one subagent coordinator for dispatch, progress,
-  task review, fixes, and integrated verification. Small work stays inline; plan-only,
+- Small understood work defaults to inline execution; significant risk can add
+  independent review without delegated implementation. Substantial separable work
+  uses one subagent coordinator for dispatch, progress, task review, fixes, and
+  integrated verification. Task count alone does not justify delegation. Plan-only,
   review-only, and verification-only requests preserve their requested scope.
+- Both task and final integrated findings require fixes, affected checks, and
+  independent re-review against the delivered revision/patch. Resume preserves
+  completed work and reconciles stopped/active writers before another writer starts.
+- Unclear bugs use evidence-led diagnosis before a cause-level regression fix.
+  Verification reuse accounts for relevant dependencies, configuration, schema/data,
+  and environment inputs as well as source changes.
 - Development SDLC is installable by itself with all required prompts, templates,
   and standards, honest inline fallback, and no hidden upstream plugin dependency.
 - Engineering guidance applies YAGNI, KISS, DRY, modular design, explicit contracts,

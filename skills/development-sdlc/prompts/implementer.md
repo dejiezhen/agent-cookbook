@@ -45,7 +45,8 @@ Write the full report at the supplied path:
 - Stage and standard modules actually read.
 - Commits or patch identity.
 - RED and GREEN evidence for changed behavior, including why the failure was relevant.
-- Other checks, results, and checks not run.
+- Other checks, results, tested revision/patch, relevant dependency/configuration/
+  environment inputs, and checks not run; sufficient to judge evidence reuse.
 - Self-review findings, decisions, and unresolved concerns.
 
 Return a short status: `DONE`, `DONE_WITH_CONCERNS`, `NEEDS_CONTEXT`, or `BLOCKED`,

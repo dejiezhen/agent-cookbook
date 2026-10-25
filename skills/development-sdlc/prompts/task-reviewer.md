@@ -21,7 +21,9 @@ Stay scoped to the task. Inspect outside the diff to resolve a named risk, rathe
 than launching a whole-project audit. State any truncated input or unverifiable
 requirement. Do not call an absent check a defect without inspecting its owner.
 
-Use test evidence for the exact reviewed code. Run a focused check when a concrete
+Record the reviewed revision/patch. Check that reused test evidence still covers
+relevant dependency, configuration, schema/fixture, and environment inputs as well
+as code. Run a focused check when a concrete
 question is unanswered; avoid repeating a full suite solely because another agent
 ran it. Missing or inconsistent evidence is a gap to resolve, not proof of success.
 Do not modify product files, change Git state, spawn agents, or fix code during

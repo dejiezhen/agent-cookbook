@@ -39,9 +39,13 @@ Python database work loads engineering + Python + PostgreSQL. Each delegated tas
 explicitly passes the applicable modules to its implementer **and reviewer**.
 Unrelated modules stay unloaded.
 
-For suitable multi-task work, one coordinator dispatches fresh sequential task
-implementers, independent spec/quality review, and integrated final review. Small
-or tightly coupled work stays inline. The bundle has all required prompts, templates,
+Small understood changes default to inline work. Significant risk can add independent
+review without delegating implementation. Substantial separable work uses one
+coordinator, fresh sequential task implementers, task reviews, and integrated review.
+Required findings, including final-review findings, follow fix → affected checks →
+scoped independent re-review. Unclear bugs get cause-led diagnosis; reused test
+evidence must still cover relevant code, dependency, configuration, and environment
+inputs. The bundle has all required prompts, templates,
 and standards; it needs no sibling skill or upstream plugin. Actual subagent execution
 depends on the host's available tools and permission to delegate. Planning-only,
 review-only, and verification-only requests stay within their requested scope.

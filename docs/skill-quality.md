@@ -38,7 +38,7 @@ The library has structural validation and tests of its management utilities. The
 checks alone do not demonstrate that the skills improve agent behavior. A
 [historical subagent workflow trial](evaluation.md#recorded-trial-combined-subagent-workflow)
 executed two tasks with fresh implementers, independent task review, integrated review,
-and passing tests. It exercised the successful path, not recovery or a fix loop.
+and passing tests. That historical trial exercised the successful path.
 A [Development SDLC routing trial](evaluation.md#recorded-trial-development-sdlc-scope-and-stack-routing)
 then exercised full-stack planning-only and Vue review-only scope on the new bundle,
 preserving existing files and Git state. A separate
@@ -47,7 +47,16 @@ executed the new entrypoint from requirements through TDD, explicit Python stand
 handoff, independent reviews, and a passing 14-test suite. These did not execute a
 full Vue application/database, interruption recovery, or a review fix loop. Other
 scenarios remain planned; comparative effectiveness and behavior across agent hosts
-have not been established.
+have not been established by those earlier trials.
+
+The [2026-10-25 revision trials](evaluation.md#recorded-trials-execution-defaults-recovery-and-input-validity)
+then exercised a small inline change, stale data-input rejection, seeded stopped-writer
+recovery, and a required final-review finding through regression fix and scoped
+independent re-review. A [mounted full-stack trial](evaluation.md#recorded-trial-mounted-full-stack-archive-feature)
+exercised Vue through a Python API to a WASM PostgreSQL engine with an independent
+final review. Native PostgreSQL was blocked by the sandbox; native concurrency and
+locking, actual live-worker interruption, fix-budget exhaustion, cross-host behavior,
+and comparative effectiveness remain unestablished.
 
 Further validation should use a real permitted project task: record a baseline,
 run the same task with a selected skill under comparable conditions, inspect artifacts

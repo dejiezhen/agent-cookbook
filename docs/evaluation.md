@@ -65,6 +65,18 @@ guidance; do not require all plausible skills to be invoked.
     standards, stops before implementation, and review keeps product files unchanged.
     In Python-only work, an unrelated Vue dependency must not force loading Vue.
     Check that actual task workers and reviewers receive and read selected modules.
+12. **Proportionate execution:** Give one small understood function change. Check
+    observed TDD and useful self-review without worker/reviewer fan-out or a ledger.
+    Separately use a cohesive authorization change to check inline implementation
+    plus independent review without a manufactured multi-task pipeline.
+13. **Final findings and recovery:** Supply a stopped writer's ledger, a completed
+    task, and pending final review of another implemented task. Include an unmet
+    criterion in the latter. Check reconciliation, preservation of completed work,
+    independent findings, a regression fix, affected checks, and scoped independent
+    re-review tied to the delivered state.
+14. **Stale inputs:** Supply a passing historical run and change only a runtime data
+    file or test configuration. In verification-only mode, check that the affected
+    test reruns, its actual failure is reported, and product files remain unchanged.
 
 Record the agent/version, prompt, fixture revision, selected skill revision,
 observable outcome, and failures. Compare against the same task without the skill
@@ -180,3 +192,66 @@ delegation fallback, live services, or full-stack implementation. No baseline sp
 cost, or effectiveness comparison was performed. These small fixtures establish
 working paths, not a reason to use subagents for every small change. Raw artifacts
 remain in local scratch and are not distributed.
+
+## Recorded trials: execution defaults, recovery, and input validity
+
+Date: 2026-10-25. Two context-free controllers used a standalone 24-file candidate
+bundle, SHA-256 `87c147c8c43c6aac779966aadf5593d38dcfde7ff51984b702136c06faf4a653`
+(the sorted path/NUL/bytes/NUL algorithm above). They inherited host models without
+overrides; resolved model versions were not captured. All fixtures were local,
+standard-library Python 3.13.4, with networking/installation/publication prohibited.
+
+| Scenario | Actual behavior and evidence |
+| --- | --- |
+| Small title-normalization change | Inline implementation and self-review, no workers or ledger; relevant observed RED/GREEN; final 4-test suite passed. Only the function and its new test changed |
+| Verification after data-only change | Previous 1-test success at unchanged HEAD was rejected because the runtime JSON input changed. The affected test reran and failed on `Stored` versus required `Archived`; verification-only scope preserved the product edit |
+| Resume from stopped-writer ledger | Controller reconciled actual revisions and protected hashes, retained completed CODE work, and used inline AUTH fixes plus independent review rather than another implementation pipeline |
+| Required final-review finding | Fresh reviewer failed specification/quality at baseline `90ac7c6` for incorrect owner authorization. New denial regressions produced 3 relevant failures across 6 methods, followed by all 6 passing after the fix |
+| Scoped final re-review | Same reviewer checked exact commit `79ff67a`, resolved the original finding, and passed specification/quality. Initial failure and final approval remain separate records |
+| Preservation | Completed CODE module/test and original uncommitted user note remained byte-identical; only AUTH source/test were committed |
+
+The parent inspected reports/review results and independently checked protected
+hashes and original dirty-file sets. Recovery began from a seeded ledger recording
+the prior writer stopped; it did not actually interrupt a live worker or exercise
+an unknown active-writer state. Fix-budget exhaustion remains untested. No baseline
+cost/effectiveness comparison or other agent host was exercised. Raw artifacts are
+retained in local scratch, not distributed with the skill.
+
+## Recorded trial: mounted full-stack archive feature
+
+Date: 2026-10-25. The maintaining agent used the same candidate bundle for one
+cohesive inline Vue/TypeScript/Python/PostgreSQL feature, with a fresh independent
+final reviewer for authorization/database risk. This was a maintained fixture task,
+not a context-free end-to-end controller trial. Local baseline `95b1ec9`; final
+commit `3b9800f`. Its fixed per-process actor was an existing test authentication
+adapter, not production authentication. All services and data were disposable/local.
+
+| Check | Actual result |
+| --- | --- |
+| API RED | 3 meaningful assertion failures: unimplemented archive returned 501 instead of 200/403/404 |
+| Vue RED | Mounted managed-browser component visibly reported `Archive not implemented` and retained both projects after the click |
+| API/database GREEN | All 3 tests passed for owner archival, persisted timestamp, repeated-call idempotency, active-list filtering, denied/missing operations with no row changes, and unrelated-row preservation |
+| Browser journey | Actual Vue click called the Python HTTP API; archive persisted after reload. Independent database read confirmed only the intended row archived |
+| Failure/retry | Deliberately stopped owner API produced visible `Archive failed`; restored service allowed retry and reached the empty state |
+| Quality checks | Configured `vue-tsc --noEmit` and Vite production build passed |
+| Independent review | Fresh reviewer passed specification and quality at exact final commit/patch; no material findings, product edits, or changed evidence inputs |
+
+Runtime: Vue 3.5.44, TypeScript 5.9.3, vue-tsc 3.3.13, Vite 7.3.7, Node 24.1.0,
+Python 3.13.4, psycopg 3.3.6, and PGlite 0.5.11 reporting PostgreSQL 18.6 WASM over
+the pglite-socket 0.2.14 wire adapter. PGlite is a
+[WASM PostgreSQL build](https://pglite.dev/docs/about), not a mock SQL implementation.
+
+Native PostgreSQL initialization was blocked by sandbox shared-memory restrictions.
+Standalone headless Chrome was also blocked; UI verification used the supported
+managed browser instead. Initial PGlite prepared-statement conflicts were harness
+failures, fixed before behavioral RED; prepared statements were disabled for this
+adapter. Vite served stale output after an edit and was restarted before the passing
+browser check. Those infrastructure events are not counted as behavioral failures
+or passes.
+
+This establishes a mounted cross-stack path on the declared WASM runtime. It does
+not establish native PostgreSQL multi-process locking/concurrency, production auth,
+migration rollout, browser portability, or transient loading timing. The parent
+checked the independent review and exact final input hashes, preserved note, and
+clean fixture Git state. Dependencies, app code, raw logs, and screenshots remain
+local validation artifacts; no test runtime was added to the distributed skill.
