@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Design"
+  short_description: "Build bounded agents with deliberate control flow"
+  default_prompt: "Use $agent-design for this task."

@@ -14,11 +14,17 @@ claims that every upstream workflow has been audited or evaluated here.
 | [Anthropic skills](https://github.com/anthropics/skills) | Examples spanning development, testing, MCP, design, and documents | Study selected workflows; inspect each license because document skills have different terms |
 | [Trail of Bits skills](https://github.com/trailofbits/skills) | Security auditing, differential review, static analysis, and testing workflows | Add selected security workflows when the project's risks call for them |
 | [Vercel agent skills](https://github.com/vercel-labs/agent-skills) | Web interface guidance and framework-specific patterns | Web review ideas can help; React-specific rules should not be applied blindly to Vue |
+| [Sentry skills](https://github.com/getsentry/skills) | Concrete engineering and review workflows | Trace protections and surrounding context before reporting defects |
+| [Anthony Fu's skills](https://github.com/antfu/skills) | Vue ecosystem guidance with focused references | Use version-aware Vue decisions while preserving the project's conventions |
 
 The original skills in this repository express independently written, project-neutral
 workflows. Upstream content has not been copied into skill folders. Before vendoring
 anything later, record the exact source revision, applicable license, retained
 notices, modifications, and the need that justifies maintaining a copy.
+
+The [source-level review](upstream-review.md) records specific skill files inspected,
+their revisions, useful additions, and rules intentionally not adopted. Source-level
+review and AI references were added on 2026-10-24.
 
 ## Agent format and discovery
 
@@ -55,3 +61,21 @@ notices, modifications, and the need that justifies maintaining a copy.
 
 Prefer maintained version-specific documentation over freezing framework API
 snippets into a long-lived skill. Refresh links when updating a related workflow.
+
+## AI agent development
+
+- [Anthropic: building effective agents](https://www.anthropic.com/research/building-effective-agents):
+  choose orchestration according to the task; its older tooling examples are not SDK recommendations.
+- [Anthropic: writing tools for agents](https://www.anthropic.com/research/writing-tools-for-agents):
+  task-aligned tool boundaries, useful results, and evaluation of actual agent use.
+- [Anthropic: agent evaluations](https://www.anthropic.com/research/demystifying-evals-for-ai-agents):
+  task environments, final outcomes, traces, and grading limitations.
+- [OpenAI evaluation principles](https://developers.openai.com/api/docs/guides/evaluation-best-practices):
+  task-specific datasets, comparison, and calibrated grading. The skills use these
+  principles without depending on the legacy Evals platform or API.
+- [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs):
+  schema constraints and explicit failure handling; semantic validation is still required.
+- [OpenAI: resisting prompt injection](https://openai.com/index/designing-agents-to-resist-prompt-injection/):
+  contain effects of manipulated external content with application boundaries.
+- [Agent Skills creator guidance](https://agentskills.io/skill-creation/best-practices):
+  grounded procedures, moderate detail, progressive disclosure, and execution-based refinement.

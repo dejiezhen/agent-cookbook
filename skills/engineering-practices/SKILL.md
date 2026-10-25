@@ -15,6 +15,12 @@ configuration. State the desired behavior and the existing boundary that owns it
 Turn new behavior into a short spec with observable acceptance criteria, then work
 through red → green → refactor. For a small change, a few sentences are enough.
 
+Identify the invariant and effects: what must remain true, who owns the state,
+and what can be committed or observed externally. For meaningful failure behavior,
+consider denied access, partial failure, and repeated execution. Use cases relevant
+to this operation. Read [decision examples](references/decision-examples.md) when
+an abstraction, dependency, retry, or wider refactor seems necessary.
+
 ## Design decisions
 
 - Keep business rules near their owner and I/O at explicit boundaries. Use a plain

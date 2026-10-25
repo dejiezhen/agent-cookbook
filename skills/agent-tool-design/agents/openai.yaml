@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Tool Design"
+  short_description: "Design precise tool contracts and reliable effects"
+  default_prompt: "Use $agent-tool-design for this task."

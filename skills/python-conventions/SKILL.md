@@ -9,6 +9,9 @@ Inspect the supported Python version, `pyproject.toml`, dependency manager,
 format/lint/type-check settings, and nearby tests. Work within these choices. Avoid
 introducing a second package manager or formatter for a local change.
 
+For validation boundaries, error translation, or choosing a function versus a class,
+read [boundary examples](references/boundary-examples.md).
+
 - Use descriptive `snake_case` functions/variables and `PascalCase` classes, grouped
   imports, and the configured formatter. Prefer straightforward loops, comprehensions,
   and early returns that a maintainer can read quickly.

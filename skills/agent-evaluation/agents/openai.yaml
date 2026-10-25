@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Evaluation"
+  short_description: "Measure agent outcomes, failures, cost, and latency"
+  default_prompt: "Use $agent-evaluation for this task."

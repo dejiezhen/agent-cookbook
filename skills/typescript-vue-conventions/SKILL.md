@@ -10,6 +10,10 @@ linting, formatting, and state management. Preserve established choices. For a n
 Vue 3 component without an existing convention, prefer a typed single-file component
 using Composition API and `<script setup lang="ts">`.
 
+For async watchers, props destructuring, or reactivity depth, read
+[Vue decisions and examples](references/vue-decisions.md). Check the project's Vue
+version before adopting a macro or applying a rule from another repository.
+
 ## TypeScript
 
 - Preserve strict checking. For a new project, propose strict mode; fix existing

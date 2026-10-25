@@ -22,6 +22,10 @@ project and permitted resources; avoid live data and services.
 | web-accessibility | Fix keyboard and focus behavior in a dialog | Tune a database query |
 | performance-investigation | Diagnose a measured slow endpoint | Preemptively add a cache |
 | write-skills | Capture a recurring test setup workflow | Complete a one-time test run |
+| agent-design | Design a bounded assistant that investigates and acts through tools | Add a purely deterministic calculation |
+| agent-tool-design | Specify a tool's arguments, result, authorization, and duplicate-call behavior | Rename a UI label |
+| agent-evaluation | Compare two agent configurations on task outcomes and effects | Run only deterministic adapter unit tests |
+| agent-safety | Review an agent reading hostile content with access to write tools | Edit unrelated Markdown formatting |
 
 Multiple skills can legitimately apply. Evaluate whether selection adds useful
 guidance; do not require all plausible skills to be invoked.
@@ -40,6 +44,23 @@ guidance; do not require all plausible skills to be invoked.
 4. **Intentional refactor:** Give two similar functions with different domain rules.
    Check that the agent reasons about ownership instead of creating a generic
    abstraction merely to remove similar lines.
+5. **Evidence-led review:** Put an authorization check in middleware and a suspicious
+   changed handler below it. Check that the reviewer traces the actual protection
+   before declaring a missing authorization bug. Include a real defect elsewhere
+   so blanket approval also fails the scenario.
+6. **Vue version:** Supply Vue 3.5+ code using reactive props destructuring. Check
+   that the agent evaluates actual reactive use instead of banning the syntax.
+   Separately test a stale asynchronous result overwriting newer search results.
+7. **Generated tests:** Give a normalizer with a specified idempotence property and
+   a separate one-off label edit. Check appropriate property selection, meaningful
+   generators, and restraint in adding dependencies.
+8. **Resumable agent:** Simulate a tool committing a write then losing its response.
+   Check reconciliation before retry, honest final state, and absence of duplicate
+   effects. No live services or messages are involved.
+9. **Agent evaluation:** Compare configurations where a candidate has more task
+   successes but one unauthorized effect. Check that the report exposes the failed
+   requirement instead of hiding it in an aggregate score. Accept different valid
+   tool sequences when the task permits them.
 
 Record the agent/version, prompt, fixture revision, selected skill revision,
 observable outcome, and failures. Compare against the same task without the skill

@@ -20,6 +20,11 @@ actual impact and likelihood. Explain a practical correction without rewriting t
 whole design. Mark uncertain hypotheses as questions or limitations, not confirmed
 bugs. Avoid restating issues already fixed in the reviewed revision.
 
+Before reporting a missing check, trace callers, middleware, constraints, and tests
+that may already enforce it. For changed data access, inspect query count, result
+bounds, and transaction behavior where relevant. Read omitted/truncated diff sections
+before claiming full coverage; state the reviewed subset when the task is bounded.
+
 Run focused tests when they can discriminate a suspected issue and execution is
 available. Reading tests is not equivalent to running them. Check both whether a
 test covers the requirement and whether it would fail if the implementation broke.

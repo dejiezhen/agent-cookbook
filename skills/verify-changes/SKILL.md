@@ -15,6 +15,15 @@ real browser for claims involving keyboard behavior, navigation, or rendering th
 unit tests cannot establish. Use the supported Postgres version for claims about
 database semantics. A successful build alone does not establish behavior.
 
+Keep claims narrow:
+
+| Claim | Evidence that addresses it |
+| --- | --- |
+| A regression is fixed | Assertion distinguishes pre-fix behavior and passes with the fix |
+| A Vue feature works | Relevant interaction checks plus configured template/type checks |
+| A write succeeded | Authoritative committed state, not only a mocked adapter call |
+| An agent completed a task | Required final state and no forbidden effects, not just its final message |
+
 Inspect results, test counts, exit codes, warnings, skipped cases, and the actual
 environment. Distinguish a failing assertion from a missing service. A passing test
 with its essential dependency mocked out supports only the narrower claim.

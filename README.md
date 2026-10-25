@@ -1,6 +1,6 @@
 # Agent cookbook
 
-Portable skills for **intentional Vue, TypeScript, Python, and Postgres development**.
+Portable skills for **intentional Vue, TypeScript, Python, Postgres, and AI agent development**.
 The default implementation workflow is **spec → red → green → refactor → verify**.
 
 Keep changes small enough to explain and complete enough to satisfy the requirement.
@@ -8,7 +8,7 @@ Reuse existing conventions. Add abstractions, dependencies, and configuration fo
 demonstrated need. Treat correctness, accessibility, security, and data integrity as
 part of the behavior where relevant.
 
-This library contains 14 original skills and a [curated source catalog](docs/sources.md).
+This library contains 18 original skills and a [curated source catalog](docs/sources.md).
 It is a focused starting point, not an exhaustive index of every agent skill.
 
 ## Start with these
@@ -20,6 +20,20 @@ It is a focused starting point, not an exhaustive index of every agent skill.
 | [Test-driven development](skills/test-driven-development/SKILL.md) | Small, observed red → green → refactor cycles |
 | [TypeScript / Vue conventions](skills/typescript-vue-conventions/SKILL.md) | Types, component ownership, reactivity, focused tests |
 | [Python conventions](skills/python-conventions/SKILL.md) | Readability, errors, types, resources, focused modules |
+
+## Tool-using agents and automation
+
+| Skill | What it contributes |
+| --- | --- |
+| [Agent design](skills/agent-design/SKILL.md) | Choose simple control flow, bound runs, and handle interruption |
+| [Agent tool design](skills/agent-tool-design/SKILL.md) | Explicit tool schemas, outcomes, authorization, and retry semantics |
+| [Agent evaluation](skills/agent-evaluation/SKILL.md) | Measure task outcomes, unintended effects, recovery, cost, and latency |
+| [Agent safety](skills/agent-safety/SKILL.md) | Preserve trust boundaries around external content and actions |
+
+For AI features, apply TDD to deterministic code and use task-specific evaluations
+for model behavior. A passing adapter test does not establish reliable tool choice
+or a correct external outcome. Evaluation and tool-contract templates are included
+inside their respective skills. No live model calls are needed to use this library.
 
 ## Add when useful
 
@@ -94,6 +108,14 @@ The validator checks manifests, folder names, UI metadata, local Markdown links,
 and distributable file structure. Tooling tests cover copying and preservation.
 [Behavioral evaluation prompts](docs/evaluation.md) are provided for future trials;
 passing structural checks does not prove that a skill improves agent performance.
+
+## How much detail belongs in a skill?
+
+Keep the entrypoint focused. Load examples and fragile, task-specific details from
+references when relevant. Depth comes from concrete decisions, failure cases, and
+tested outcomes, rather than a target word count. See [skill quality](docs/skill-quality.md)
+and the [upstream review](docs/upstream-review.md) for the rationale and specific
+ideas incorporated from open-source skill repositories.
 
 See [preferences and next decisions](docs/preferences.md) for tailoring and
 [contribution guidance](CONTRIBUTING.md) for adding skills. Original content is MIT

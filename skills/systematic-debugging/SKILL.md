@@ -15,6 +15,10 @@ Choose a small discriminating experiment: name the hypothesis, predicted result,
 and how each possible result changes the next step. Change one meaningful variable
 at a time. Prefer temporary instrumentation over speculative production rewrites.
 
+When a failure crosses components, read the
+[boundary tracing example](references/boundary-tracing.md). Locate the first boundary
+whose observed output violates its contract before changing downstream symptoms.
+
 Once evidence supports a cause, capture it in a focused regression test or a
 repeatable reproduction check. Observe failure, implement the smallest cause-level
 fix, and observe success. Check nearby failure paths. Do not fix the symptom with

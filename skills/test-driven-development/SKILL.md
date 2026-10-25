@@ -31,6 +31,16 @@ Keep tests deterministic: control clocks and random seeds when relevant, await
 observable async conditions, and isolate mutable state. Mock external boundaries
 when their behavior is outside the test's claim.
 
+For a regression, ensure the assertion distinguishes the bug from the fix. If
+test-first order was missed, compare with pre-fix behavior in an isolated copy
+when practical; preserve the user's working tree. For parsers, serializers,
+normalizers, or state transitions with meaningful invariants, read
+[test design](references/test-design.md) to decide whether generated cases add value.
+
+For model-driven behavior, retain TDD for deterministic adapters and orchestration,
+and define task-specific evaluations for output quality, tool choice, and effects.
+A single exact model reply does not establish reliable agent behavior.
+
 If implementation already exists, preserve it and add characterization or regression
 coverage. Report that test-first order was missed; never delete user code or claim
 an unobserved red. If execution is blocked, state that limit without inventing results.

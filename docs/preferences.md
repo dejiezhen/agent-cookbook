@@ -4,6 +4,7 @@
 
 - Full-stack development with Vue, TypeScript, Python, and PostgreSQL.
 - Portable instructions for Codex, Claude Code, and Cursor.
+- AI development focus: tool-using agents and automation.
 - Spec → red → green → refactor, followed by verification of acceptance criteria.
 - Intentional changes: solve the concrete requirement, preserve existing conventions,
   and justify new abstractions, dependencies, configuration, and files.
@@ -24,4 +25,5 @@
 Do not add framework-specific defaults until a real project resolves these choices.
 Next useful candidates are a project-specific test runner skill, a CI diagnosis
 skill, a focused authorization review, or an end-to-end user journey workflow.
-Add AI evaluation guidance if building AI features becomes a recurring need.
+Agent design, tool contracts, evaluation, and safety workflows are included. Tailor
+their concrete tools, budgets, and acceptance cases from the first real project.

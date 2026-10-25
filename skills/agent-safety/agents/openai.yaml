@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Safety"
+  short_description: "Enforce trust boundaries around content and actions"
+  default_prompt: "Use $agent-safety for this task."
