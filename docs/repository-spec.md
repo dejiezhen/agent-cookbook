@@ -17,6 +17,9 @@ Support local Codex, Claude Code, and Cursor projects.
   constraints. The saved spec/plan distinguishes decisions, assumptions, and blocking
   questions and can be consumed without the interview transcript. Planning-only
   scope does not start implementation.
+- Every plan includes a style guide scaled to the task, referencing existing
+  design/code conventions and stating relevant decisions and checks. Non-UI work
+  records applicable interface/output/code conventions without a visual redesign.
 - A curated source catalog links to primary upstream projects, explains their use,
   and distinguishes references from adapted content. The requested Superpowers
   adaptation retains its source revision, license, and modification record.

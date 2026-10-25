@@ -10,6 +10,8 @@
   New or ambiguous products can use a thorough adaptive discovery interview, with
   small rounds of questions and an implementation-ready handoff rather than a fixed
   questionnaire. Existing documented decisions are reused, not asked again.
+  Every plan includes a proportionate style guide for the relevant visual,
+  interaction, writing, and code conventions, reusing existing product choices.
   It loads stage and stack modules as needed. Small work stays inline; significant
   risk can add independent review without delegated implementation. For substantial
   work with useful task separation, its

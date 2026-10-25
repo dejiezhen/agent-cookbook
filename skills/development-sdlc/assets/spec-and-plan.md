@@ -1,6 +1,7 @@
 # Feature or fix
 
-Use applicable sections only. A tiny change can be a short spec in chat; a new
+Keep a style-guide section in every plan; scale other sections to the work.
+A tiny change can be a short spec in chat; a new
 product or substantial milestone needs enough context to survive a new agent/chat.
 
 ## Problem and first useful outcome
@@ -26,6 +27,15 @@ decisions to the tasks they block. Skip sections that add no useful information.
 | ID | Given / when / then, including relevant failures | Planned test level/case |
 | --- | --- | --- |
 | AC-1 | Observable result | Unit, integration, or browser |
+
+## Style guide
+
+Reference the project's authoritative design/code sources and record affected
+choices. For a UI, cover relevant typography, semantic colors, layout/spacing,
+components/states, accessibility/input, motion/media, and writing conventions.
+Distinguish established choices from proposals and identify checks. For non-UI work,
+mark visual styling not applicable and capture code/interface/output conventions.
+Do not introduce a redesign or global style migration as a side effect.
 
 ## Implementation tasks
 

@@ -28,6 +28,12 @@ modules. A plan should make execution clearer without repeating the whole spec.
 Inspect existing tests before planning new infrastructure. Identify required project
 checks and any unavailable dependency early.
 
+Include a style-guide section in every plan using the
+[style guide](../references/style-guide.md). Reuse authoritative design/code
+conventions and specify affected decisions and checks. Keep a tiny plan's guide
+brief; non-UI work records relevant code/interface conventions without inventing
+visual design.
+
 Make a substantial plan usable by an agent without the interview transcript: include
 confirmed decisions, material assumptions/open questions, criteria, ordered task IDs,
 interfaces/dependencies, relevant context paths, and the first buildable slice.

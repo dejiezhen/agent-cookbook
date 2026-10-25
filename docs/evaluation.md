@@ -82,6 +82,10 @@ guidance; do not require all plausible skills to be invoked.
     enough context for another agent without inventing missing answers or coding
     during a planning-only request. In an existing game, preserve its documented
     stack/rules and ask about the next milestone rather than restarting discovery.
+16. **Plan style guide:** For a UI plan, check that the guide preserves existing
+    tokens/components and covers affected states, responsive/input needs, writing,
+    and concrete visual checks. For a CLI/backend plan, require relevant conventions
+    without invented branding. A tiny plan should not grow a new design system.
 
 Record the agent/version, prompt, fixture revision, selected skill revision,
 observable outcome, and failures. Compare against the same task without the skill

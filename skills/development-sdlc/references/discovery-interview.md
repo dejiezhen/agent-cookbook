@@ -31,6 +31,7 @@ Use the relevant topics below as prompts, not a questionnaire to dump all at onc
 | Behavior and edge cases | Walk through a concrete successful example. What should happen for invalid input, missing data, cancellation, or repeated actions where relevant? |
 | Data and authority | What data is stored, where does it originate, and who can read/change it? Are identity, tenant isolation, sensitive data, retention, or deletion requirements actually involved? |
 | Technology and integrations | What already exists and must remain compatible? Which stack choices are requirements versus preferences? What capabilities justify external services, AI, or background work? |
+| Style and interaction | Which existing visual/code conventions apply? For a new UI, what character, reference examples, interaction needs, or accessibility constraints could change the design? |
 | Operating constraints | What are the delivery budget/timeline, hosting constraints, expected workload, and relevant reliability, accessibility, latency, cost, or recovery needs? |
 | Delivery and validation | Who will try the first slice, on which devices, and how will feedback be collected? What testing, publishing, migration, or operational work is necessary for this milestone? |
 
@@ -67,7 +68,8 @@ material decision.
 Use the [spec and plan template](../assets/spec-and-plan.md) in the project's existing
 document convention. Capture the problem/audience, success evidence, first milestone,
 scope/non-goals, behavior and acceptance/test map, stack decisions with reasons,
-important data/interfaces, risks/open questions, and ordered cohesive tasks. Each
+the [style guide](style-guide.md), important data/interfaces, risks/open questions,
+and ordered cohesive tasks. Each
 task needs criterion IDs, dependencies, context, and a completion check. Distinguish
 verified commands/paths from proposed ones. Identify the first end-to-end slice and
 which tasks can start versus require an answer; another agent should need no chat

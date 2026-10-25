@@ -118,7 +118,10 @@ Use existing project decisions, ask questions in small rounds, and stop before c
 The interview explores the problem, audience, first useful scope, behavior, data,
 stack/integrations, constraints, and validation as relevant. It produces one saved
 spec/plan with acceptance criteria, decisions, open questions, dependencies, and
-ordered tasks. When ready, ask the agent to implement that plan by its path.
+ordered tasks. Every plan includes a proportionate
+[style guide](skills/development-sdlc/references/style-guide.md), reusing existing
+design/code conventions and specifying relevant visual, interaction, accessibility,
+and writing decisions. When ready, ask the agent to implement that plan by its path.
 
 For already understood work:
 
