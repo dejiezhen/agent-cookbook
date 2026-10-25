@@ -33,10 +33,13 @@ and author-specific preferences in the same file; evaluate both separately.
 ## Current evidence and limits
 
 The library has structural validation and tests of its management utilities. These
-checks do not demonstrate that the skills improve agent behavior. Manual behavioral
-scenarios are documented but have not yet been executed as independent trials.
+checks alone do not demonstrate that the skills improve agent behavior. One
+[recorded subagent workflow trial](evaluation.md#recorded-trial-combined-subagent-workflow)
+executed two tasks with fresh implementers, independent task review, integrated review,
+and passing tests. It exercised the successful path, not recovery or a fix loop.
+Other scenarios remain planned, and comparative effectiveness has not been established.
 
-The next meaningful validation is a real permitted project task: record a baseline,
+Further validation should use a real permitted project task: record a baseline,
 run the same task with a selected skill under comparable conditions, inspect artifacts
 and execution, and revise only from observed failures. Project-specific examples,
 commands, schemas, and incidents will add more value than padding every entrypoint.

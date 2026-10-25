@@ -1,8 +1,9 @@
 # Skill evaluation prompts
 
-These are **planned manual scenarios**, not completed agent evaluations. Structural
-validation and utility tests are automated separately. Use an isolated disposable
-project and permitted resources; avoid live data and services.
+The scenarios below are evaluation prompts; completed executions are recorded
+separately at the end. Structural validation and utility tests are automated
+separately. Use an isolated disposable project and permitted resources; avoid live
+data and services.
 
 ## Trigger checks
 
@@ -26,6 +27,7 @@ project and permitted resources; avoid live data and services.
 | agent-tool-design | Specify a tool's arguments, result, authorization, and duplicate-call behavior | Rename a UI label |
 | agent-evaluation | Compare two agent configurations on task outcomes and effects | Run only deterministic adapter unit tests |
 | agent-safety | Review an agent reading hostile content with access to write tools | Edit unrelated Markdown formatting |
+| subagent-driven-development | Execute a multi-task implementation plan with fresh workers and independent review | Write only a spec, change one label, or build a runtime agent product |
 
 Multiple skills can legitimately apply. Evaluate whether selection adds useful
 guidance; do not require all plausible skills to be invoked.
@@ -61,8 +63,47 @@ guidance; do not require all plausible skills to be invoked.
    successes but one unauthorized effect. Check that the report exposes the failed
    requirement instead of hiding it in an aggregate score. Accept different valid
    tool sequences when the task permits them.
+10. **Subagent coordination:** Execute two independent utility tasks in an isolated
+    Git repository. Check distinct task workers, independent task reviews, an integrated
+    review, observed TDD evidence, a durable ledger, and preservation of user-owned
+    files. Resume a recorded stage rather than repeating completed work. Verify the
+    skill can be installed with its required prompts, templates, and license intact.
 
 Record the agent/version, prompt, fixture revision, selected skill revision,
 observable outcome, and failures. Compare against the same task without the skill
 when practical. Grade behavior and artifact quality, not phrase matching. Make narrow
 revisions supported by observed failure, then rerun the relevant scenario.
+
+## Recorded trial: combined subagent workflow
+
+Date: 2026-10-24. An independent controller was given the adapted skill and a small
+isolated Git repository, without this conversation's history. It was asked to execute
+a supplied two-task plan using the skill as written. Exact model versions were not
+captured; workers inherited the host's configured models without overrides.
+
+The fixture contained a tag-normalization stub, a page-limit parser stub, one baseline
+test, project instructions, and a user-owned note. The plan specified whitespace and
+ASCII handling for normalization; the parser required a default, ASCII decimal syntax,
+and the inclusive range 1–100. Standard library only; local commits allowed; external
+services and publication prohibited. These were local fixture revisions, not commits
+in this cookbook: baseline `e13a725`, task 1 `68b8bb5`, final `1eafba4`.
+
+| Observation | Actual result |
+| --- | --- |
+| Task implementation | Two separate context-free implementers, run sequentially |
+| Task review | Two fresh read-only reviewers; separate spec and quality verdicts approved |
+| Integrated review | One fresh reviewer approved the complete base-to-final change |
+| Task 1 TDD | Relevant stub RED; 7 focused tests GREEN; 8 total tests passed |
+| Task 2 TDD | Relevant stub RED; 10 focused tests GREEN; final 18-test suite passed |
+| Scope | Only the two utility modules and their new test files changed |
+| Preservation | Existing note unchanged byte-for-byte; working tree clean |
+| Recovery records | Briefs, reports, exact diffs, test logs, and a durable ledger retained |
+| Standalone packaging | All 10 skill files copied unchanged; references valid and license retained |
+
+The parent checked the controller's report, integrated-review record, actual Git
+diff/status, and preserved-note hash. There were no review findings, so fix-loop and
+budget behavior were not exercised. Interrupted recovery and unavailable-subagent
+fallback remain untested. There was no comparison against inline execution or an
+unmodified upstream workflow; this is evidence of one functioning execution, not
+proof of general effectiveness or a speed/cost improvement. Raw trial artifacts are
+kept in the local workspace's ignored scratch area and are not distributed here.

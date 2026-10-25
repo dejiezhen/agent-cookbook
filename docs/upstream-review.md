@@ -1,9 +1,9 @@
 # Review of upstream engineering skills
 
-Reviewed 2026-10-24 by reading the skill files themselves. This records design
-influences and original additions; no upstream skill text, code, or scripts are
-vendored. Repository license labels below describe the inspected root license,
-not every file in every collection.
+Reviewed 2026-10-24 by reading the skill files themselves. The rows below record
+design influences and original additions. The subsequently requested subagent
+workflow is a modified adaptation recorded separately below. Repository license
+labels describe the inspected root license, not every file in every collection.
 
 | Source at inspected revision | Useful addition here | Boundary retained here |
 | --- | --- | --- |
@@ -21,9 +21,23 @@ not every file in every collection.
   the collection includes generated and upstream-sourced material.
 - Trail of Bits: [CC BY-SA 4.0 root license at the inspected revision](https://github.com/trailofbits/skills/blob/196a9073ab10d35bacf111f945e02c00b2c6883a/LICENSE).
 
-This review incorporated general methods in independently written instructions and
-original examples. Any future import of source files needs its own source/notice
-record; the library's MIT license does not replace third-party terms.
+The original additions incorporate general methods in independently written
+instructions and examples. Any adapted files need their own source/notice record;
+the library's MIT license does not replace third-party terms.
+
+## Combined subagent workflow
+
+The user selected Superpowers' subagent-driven development as the implementation
+coordinator. The [adapted skill](../skills/subagent-driven-development/SKILL.md)
+bundles role prompts, plan/ledger templates, and review/recovery guidance. Its
+[source record](../skills/subagent-driven-development/UPSTREAM.md) and
+[license](../skills/subagent-driven-development/LICENSE) travel with an installation.
+
+Spec-driven development now supplies requirements and task plans. Code review and
+verification remain usable independently and provide standards within the assigned
+roles; they do not dispatch another pipeline. TDD and language conventions stay
+focused on how to implement. The product-facing agent skills retain their separate
+purpose. This combines coordination while preserving useful standalone workflows.
 
 ## What the comparison says about length
 

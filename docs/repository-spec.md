@@ -12,7 +12,13 @@ green → refactor → verify**. Support local Codex, Claude Code, and Cursor pr
   is implemented through small failing-test/passing-test cycles. Existing user work
   is preserved; a missed test-first step is reported honestly without deleting work.
 - A curated source catalog links to primary upstream projects, explains their use,
-  and distinguishes references from vendored content. No upstream skill is copied.
+  and distinguishes references from adapted content. The requested Superpowers
+  adaptation retains its source revision, license, and modification record.
+- Planned multi-task work uses one subagent coordinator for dispatch, progress,
+  task review, fixes, and integrated verification. Spec planning and implementation
+  standards do not launch overlapping coordination pipelines.
+- The subagent workflow is installable by itself with all required prompts and
+  templates, honest inline fallback, and no hidden dependency on an upstream plugin.
 - A selected skill can be copied into the chosen agent's project directory. Preview
   is the default; writes require `--apply`. Existing destinations, unknown names,
   traversal, and overlapping source/destination paths are rejected before copying.
@@ -21,7 +27,7 @@ green → refactor → verify**. Support local Codex, Claude Code, and Cursor pr
 - Tests exercise installer behavior in temporary directories, including preservation
   of existing content and references. Validation and tests run in CI.
 - The local Git repo is prepared for public publication without local absolute paths,
-  credentials, environment files, or third-party source copied into the repository.
+  credentials, or environment files. Third-party adapted material is recorded.
 
 ## Scope
 

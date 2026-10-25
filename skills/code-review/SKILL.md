@@ -5,6 +5,11 @@ description: Review a diff or pull request for actionable defects, regressions, 
 
 # Review a change
 
+This skill defines review standards and produces findings. Within subagent-driven
+development, apply these standards in its assigned reviewer role; the coordinator
+owns reviewer dispatch and fix loops. Do not launch an additional review pipeline
+or delegate from a read-only reviewer assignment. Standalone reviews work directly.
+
 Read the requested diff, relevant specification, nearby callers, and project
 instructions. Establish the base revision and changed behavior. Trace important
 inputs through outputs and durable effects; do not judge a changed line in isolation.

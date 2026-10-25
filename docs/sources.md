@@ -17,10 +17,11 @@ claims that every upstream workflow has been audited or evaluated here.
 | [Sentry skills](https://github.com/getsentry/skills) | Concrete engineering and review workflows | Trace protections and surrounding context before reporting defects |
 | [Anthony Fu's skills](https://github.com/antfu/skills) | Vue ecosystem guidance with focused references | Use version-aware Vue decisions while preserving the project's conventions |
 
-The original skills in this repository express independently written, project-neutral
-workflows. Upstream content has not been copied into skill folders. Before vendoring
-anything later, record the exact source revision, applicable license, retained
-notices, modifications, and the need that justifies maintaining a copy.
+Original skills express independently written, project-neutral workflows. The
+requested [subagent workflow adaptation](../skills/subagent-driven-development/UPSTREAM.md)
+retains upstream provenance and its bundled MIT license; see [third-party notices](../THIRD_PARTY_NOTICES.md).
+Other source links are references. For future imports, record the source revision,
+applicable license, notices, modifications, and the need for maintaining a copy.
 
 The [source-level review](upstream-review.md) records specific skill files inspected,
 their revisions, useful additions, and rules intentionally not adopted. Source-level

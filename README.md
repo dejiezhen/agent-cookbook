@@ -8,7 +8,8 @@ Reuse existing conventions. Add abstractions, dependencies, and configuration fo
 demonstrated need. Treat correctness, accessibility, security, and data integrity as
 part of the behavior where relevant.
 
-This library contains 18 original skills and a [curated source catalog](docs/sources.md).
+This library contains 19 skills: 18 original skills and a self-contained Superpowers
+adaptation, plus a [curated source catalog](docs/sources.md).
 It is a focused starting point, not an exhaustive index of every agent skill.
 
 ## Start with these
@@ -17,9 +18,22 @@ It is a focused starting point, not an exhaustive index of every agent skill.
 | --- | --- |
 | [Engineering practices](skills/engineering-practices/SKILL.md) | Design decisions, explicit boundaries, intentional scope |
 | [Spec-driven development](skills/spec-driven-development/SKILL.md) | Observable acceptance criteria before implementation |
+| [Subagent-driven development](skills/subagent-driven-development/SKILL.md) | Coordinate task implementers, independent review, and final verification |
 | [Test-driven development](skills/test-driven-development/SKILL.md) | Small, observed red → green → refactor cycles |
 | [TypeScript / Vue conventions](skills/typescript-vue-conventions/SKILL.md) | Types, component ownership, reactivity, focused tests |
 | [Python conventions](skills/python-conventions/SKILL.md) | Readability, errors, types, resources, focused modules |
+
+For a planned feature, use **spec and plan → subagent implementation with TDD →
+task review → integrated review and verification**. The spec skill owns requirements
+and planning. The subagent skill is the single coordinator. Engineering, language,
+TDD, review, and verification skills supply standards within its roles; they do not
+launch duplicate pipelines. Small or tightly coupled work can stay inline.
+
+The adapted subagent skill bundles its implementer/reviewer prompts, plan and progress
+templates, and recovery rules. It has no hidden dependency on the Superpowers plugin
+or scripts. Subagent execution requires the host's delegation tools; inline fallback
+is explicit. [Source and modifications](skills/subagent-driven-development/UPSTREAM.md)
+record the upstream revision and retained license.
 
 ## Tool-using agents and automation
 
@@ -33,7 +47,8 @@ It is a focused starting point, not an exhaustive index of every agent skill.
 For AI features, apply TDD to deterministic code and use task-specific evaluations
 for model behavior. A passing adapter test does not establish reliable tool choice
 or a correct external outcome. Evaluation and tool-contract templates are included
-inside their respective skills. No live model calls are needed to use this library.
+inside their respective skills. These guides do not prescribe a provider or execute
+API calls by themselves; the subagent workflow uses its host's delegation tools.
 
 ## Add when useful
 
@@ -57,7 +72,7 @@ the target project's tools. Clone this repo, then preview a selected installatio
 ```sh
 git clone https://github.com/dejiezhen/agent-cookbook.git
 cd agent-cookbook
-python3 scripts/install_skills.py --dest ../your-project/.agents/skills --skills engineering-practices spec-driven-development test-driven-development typescript-vue-conventions python-conventions
+python3 scripts/install_skills.py --dest ../your-project/.agents/skills --skills engineering-practices spec-driven-development subagent-driven-development test-driven-development typescript-vue-conventions python-conventions
 ```
 
 Add `--apply` to copy after reviewing the preview. Existing skill folders are never
@@ -85,11 +100,12 @@ you expect to use; each skill is self-contained.
 In Codex, after installing the relevant skills:
 
 ```text
-Use $engineering-practices, $spec-driven-development, and
-$test-driven-development to add project archiving.
-Write a short spec, then implement one behavior at a time with red → green.
-Use $typescript-vue-conventions for UI changes and $python-conventions
-for backend changes. Keep the diff tied to the acceptance criteria.
+Use $spec-driven-development to specify and plan project archiving,
+then $subagent-driven-development to implement the plan.
+Require spec → red → green for behavior changes. Apply
+$engineering-practices, $typescript-vue-conventions, and
+$python-conventions to the relevant task roles.
+Keep each change tied to the acceptance criteria.
 ```
 
 Use `/skill-name` when invoking the equivalent skills in Claude Code. This is a
@@ -106,8 +122,9 @@ python3 -m venv .venv
 
 The validator checks manifests, folder names, UI metadata, local Markdown links,
 and distributable file structure. Tooling tests cover copying and preservation.
-[Behavioral evaluation prompts](docs/evaluation.md) are provided for future trials;
-passing structural checks does not prove that a skill improves agent performance.
+[Behavioral prompts and recorded trials](docs/evaluation.md) document the current
+evidence. The subagent workflow has one independently run two-task success-path trial;
+passing structural checks does not prove that every skill improves agent performance.
 
 ## How much detail belongs in a skill?
 
@@ -119,5 +136,5 @@ ideas incorporated from open-source skill repositories.
 
 See [preferences and next decisions](docs/preferences.md) for tailoring and
 [contribution guidance](CONTRIBUTING.md) for adding skills. Original content is MIT
-licensed; linked upstream projects retain their own licenses. No upstream skills
-are vendored here.
+licensed. The adapted workflow retains its upstream license and attribution in
+[third-party notices](THIRD_PARTY_NOTICES.md); other linked projects remain references.

@@ -5,6 +5,12 @@ description: Verify a completed code change against acceptance criteria and repo
 
 # Verify the delivered behavior
 
+This skill defines evidence requirements. Within subagent-driven development, the
+coordinator owns the verification schedule and final handoff. Reuse valid evidence
+for the exact unchanged code; resolve concrete gaps and rerun affected checks after
+changes. Do not start another completion pipeline or repeat every task's full suite.
+For standalone work, perform the relevant verification directly.
+
 Read the final diff and acceptance criteria. Find the project's actual commands in
 its configuration and instructions; do not invent a standard command sequence.
 Choose checks according to changed behavior and required project checks.
