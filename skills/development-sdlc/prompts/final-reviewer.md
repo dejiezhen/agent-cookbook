@@ -1,6 +1,6 @@
 # Integrated reviewer prompt
 
-Adapted from Superpowers. The coordinator supplies the specification, complete plan,
+The coordinator supplies the specification, complete plan,
 progress ledger, full base-to-final change, relevant constraints, and test evidence.
 Read the supplied review stage and applicable engineering/stack modules. State which
 modules were actually read; task reports do not replace these review standards.

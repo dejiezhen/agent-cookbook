@@ -1,6 +1,6 @@
 # Implementer prompt
 
-Adapted from Superpowers. Supply the concrete paths and constraints below when
+Supply the concrete paths and constraints below when
 dispatching a fresh worker. This document is the task role, not another coordinator.
 
 ## Assignment

@@ -1,6 +1,6 @@
 # Task reviewer prompt
 
-Adapted from Superpowers. Review one task independently against both its requirements
+Review one task independently against both its requirements
 and engineering quality. The coordinator supplies the task brief, relevant global
 constraints, implementer report, exact diff/new-file artifacts, and base/head identity.
 Read the supplied review stage and each selected engineering/stack module. Resolve

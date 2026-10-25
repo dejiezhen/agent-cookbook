@@ -65,6 +65,3 @@ whole change for unnecessary scope and integration gaps. Report actual checks,
 material decisions, and remaining limits; a green build or a worker's success message
 alone does not establish completion. Publishing and deployment follow existing
 authorization.
-
-Subagent mechanics and role prompts are adapted from Superpowers. Retain
-[provenance](UPSTREAM.md) and the [bundled license](LICENSE) when copying this skill.

@@ -5,8 +5,8 @@ development**. Use **requirements → acceptance criteria and spec → task plan
 red → green → refactor → review → verify**.
 
 Keep changes small enough to explain and complete enough to satisfy the requirement.
-This library contains 11 skills: one integrated development workflow with an attributed
-Superpowers adaptation, and ten complementary specialist skills. The
+This library contains 11 skills: one integrated development workflow and ten
+complementary specialist skills. The
 [source catalog](docs/sources.md) records useful upstream projects and official guidance.
 
 ## Start with Development SDLC
@@ -23,7 +23,7 @@ development-sdlc/
   prompts/                 Implementer, task reviewer, integrated reviewer
   assets/                  Spec/plan and progress templates
   agents/openai.yaml       Optional Codex UI metadata
-  LICENSE + UPSTREAM.md    Superpowers attribution and modifications
+  LICENSE + UPSTREAM.md    License and source records
 ```
 
 The engineering module applies **YAGNI, KISS, DRY, modular design, high cohesion and
@@ -49,7 +49,7 @@ review-only, and verification-only requests stay within their requested scope.
 The previous nine workflow/convention skills have been consolidated. See the
 [migration guide](docs/migration-development-sdlc.md) for old names and existing
 installations. The [source record](skills/development-sdlc/UPSTREAM.md) and
-[third-party notices](THIRD_PARTY_NOTICES.md) preserve the Superpowers attribution.
+[third-party notices](THIRD_PARTY_NOTICES.md) record licensing and attribution details.
 
 ## Complementary specialists
 

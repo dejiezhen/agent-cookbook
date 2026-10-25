@@ -1,6 +1,6 @@
 # Coordinate subagent execution
 
-Adapted from Superpowers. Read after a task plan exists, when delegation is available,
+Read after a task plan exists, when delegation is available,
 permitted, and useful. Keep small or tightly coupled work inline. One coordinator
 owns the spec, dispatch, reviews, fix loops, ledger, and final result. Stage and
 standard modules supply instructions within roles rather than another workflow.

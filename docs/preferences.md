@@ -8,7 +8,7 @@
 - Spec → red → green → refactor, followed by verification of acceptance criteria.
 - One `development-sdlc` skill owns requirements, spec/plan, TDD, review, and verification.
   It loads stage and stack modules as needed. For suitable planned work, its
-  Superpowers-derived execution stage coordinates fresh implementers, independent
+  subagent execution stage coordinates fresh implementers, independent
   task review, and integrated review. Both workers and reviewers receive the standards.
 - Apply YAGNI, KISS, DRY, modular design, high cohesion/low coupling, explicit contracts,
   and testable composition according to concrete requirements and failure costs.

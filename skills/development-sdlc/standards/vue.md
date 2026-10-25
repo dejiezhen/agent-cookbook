@@ -30,8 +30,8 @@ Check versions before adopting or rejecting an API:
 | `shallowRef` | Nested mutations do not trigger updates through it; useful when updates replace the value |
 
 Read [Vue failure examples](../references/vue-decisions.md) for async ownership,
-reactivity depth, or prop sources. Do not mechanically prefer shallow reactivity or
-ban supported syntax because an upstream author's skill has another preference.
+reactivity depth, or prop sources. Choose reactivity depth and supported syntax
+according to the actual data flow and project conventions.
 
 Test rendering and events through observable interactions. Use the existing runner;
 Vitest and Vue Test Utils are candidates when establishing new tooling. Use real
